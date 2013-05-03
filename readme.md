@@ -22,6 +22,10 @@ sudo apt-get install golang
 ##examples
 
 ```
+go run var.go
+```
+
+```
 go run for.go
 ```
 
@@ -35,4 +39,12 @@ go run if.go
 
 ```
 go run modulo.go
+```
+
+```
+go run split.go
+```
+
+```
+go run splitbyregex.go
 ```
