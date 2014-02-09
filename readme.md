@@ -45,16 +45,34 @@ do something multiple times
 go run for.go
 ```
 
+return the current time/date in various formats
+
+```
+go run time.go
+```
+
+return pseudo random integer values
+
+```
+go run random.go
+```
+
+concat strings in two different ways
+
+```
+go run cat.go
+```
+
 read via cli provided input data
 
 ```
-go run args.go
+go run args.go string string2
 ```
 
 if statement in golang
 
 ```
-go run if.go
+go run if.go Hello
 ```
 
 modulo operation finds the remainder of division
@@ -80,3 +98,21 @@ calculate and print the fibonacci numbers
 ```
 go run fibonacci.go
 ```
+
+the smallest golang http server
+
+```
+go run httpd.go
+```
+
+the smallest golang http proxy
+
+```
+go run proxy.go
+```
+
+##compile
+
+One great aspect of golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
+If you start fibonacci.go and the compiled version you will notice, that the last line which contains the execution time doesn't differ much, but if you start it with ```time ./fibonacci 32``` and ```time go run ./fibonacci.go 32``` you will see the difference.
+
