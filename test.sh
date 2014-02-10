@@ -26,6 +26,8 @@ go run splitbyregex.go
 
 go run fibonacci.go
 
+go run json.go
+
 go run httpd.go
 
 go run proxy.go

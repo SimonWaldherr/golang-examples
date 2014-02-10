@@ -9,8 +9,13 @@ import (
   "strings";
 )
 
+var url string;
+
 func handler(w http.ResponseWriter, r *http.Request) {
-  url := strings.Join([]string{"http://blog.fefe.de", r.URL.Path, "?", r.URL.RawQuery}, "");
+  url = strings.Join([]string{"http://", "blog.fefe.de", r.URL.Path}, "");
+  if (r.URL.RawQuery != "") {
+    url = strings.Join([]string{url, "?", r.URL.RawQuery}, "");
+  }
   response, err := http.Get(url);
   if (err != nil) {
     os.Exit(2);
