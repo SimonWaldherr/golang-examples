@@ -1,14 +1,24 @@
 package main
 
 import (
-  "fmt";
   "net/http";
+  "strconv";
+  "strings";
+  "fmt";
   "log";
 )
 
+var requestcounter int;
+
 func handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "Hello World\nYou requested: /%s", r.URL.Path[1:]);
-  log.Println(r.URL.Path[1:]);
+  url := r.URL.Path;
+  if (r.URL.RawQuery != "") {
+    url = strings.Join([]string{url, "?", r.URL.RawQuery}, "");
+  }
+  fmt.Fprintf(w, "Hello World\nYou requested: %s\n", url);
+  fmt.Fprintf(w, "this is request number %s\n", strconv.Itoa(requestcounter));
+  log.Println(url);
+  requestcounter++;
 }
 
 func main() {
