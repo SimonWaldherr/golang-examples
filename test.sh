@@ -26,8 +26,14 @@ go run splitbyregex.go
 
 go run fibonacci.go
 
+go run prime.go 32
+
 go run json.go
 
 go run httpd.go
 
 go run proxy.go
+
+export GOMAXPROCS=8
+time go run parallel.go true
+time go run parallel.go false

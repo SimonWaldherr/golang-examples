@@ -99,6 +99,12 @@ calculate and print the fibonacci numbers
 go run fibonacci.go
 ```
 
+calculate and print the requested (32th) prime number
+
+```
+go run prime.go 32
+```
+
 convert go object to json string
 
 ```
@@ -115,6 +121,15 @@ the smallest golang http proxy
 
 ```
 go run proxy.go
+```
+
+demonstrate the power of multithreading / parallel computing  
+you have to set GOMAXPROCS to something greater than 1 to see any effect
+
+```
+export GOMAXPROCS=8
+time go run parallel.go true
+time go run parallel.go false
 ```
 
 ## compile
