@@ -2,7 +2,7 @@ package main
 
 // import required modules
 import (
-  "fmt";
+	"fmt"
 )
 
 // in go you can write comments after "//"
@@ -14,6 +14,6 @@ inside of "/ *" and "* /" (without the spaces
 
 func main() {
 
-  // print variable
-  fmt.Println("Hello World");
+	// print variable
+	fmt.Println("Hello World")
 }
