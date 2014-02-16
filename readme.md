@@ -105,6 +105,12 @@ calculate and print the requested (32th) prime number
 go run prime.go 32
 ```
 
+pop and push in golang
+
+```
+go run lifo.go
+```
+
 convert go object to json string
 
 ```

@@ -16,5 +16,8 @@ func main() {
 		s += strconv.Itoa(i)
 	}
 	s += buffer.String()
+	for i := 0; i < 512; i++ {
+		s = "pre" + s
+	}
 	fmt.Println(s)
 }
