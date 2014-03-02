@@ -53,6 +53,7 @@ func getPrime(n int) int {
 func main() {
 	if len(os.Args) == 1 {
 		fmt.Println("start this application with the argument true to compute primenumbers parallel or false for serial")
+		fmt.Println("you can configure the maximum processes/threads amount with: \"export GOMAXPROCS=$number\"")
 	} else {
 		if os.Args[1] == "true" {
 			prime0 := make(chan int)
