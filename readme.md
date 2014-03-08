@@ -45,6 +45,24 @@ do something multiple times
 go run for.go
 ```
 
+read via cli provided input data
+
+```
+go run args.go string string2
+```
+
+read via cli provided input data
+
+```
+go run input.go
+```
+
+calculate triangles
+
+```
+go run pythagoras.go (float|?) (float|?) (float|?)
+```
+
 return the current time/date in various formats
 
 ```
@@ -63,12 +81,6 @@ concat strings in two different ways
 go run cat.go
 ```
 
-read via cli provided input data
-
-```
-go run args.go string string2
-```
-
 if statement in golang
 
 ```
@@ -79,6 +91,12 @@ modulo operation finds the remainder of division
 
 ```
 go run modulo.go
+```
+
+last in - first out - example
+
+```
+go run lifo.go
 ```
 
 split a string by another string and make an array from the result
@@ -127,6 +145,12 @@ the smallest golang http proxy
 
 ```
 go run proxy.go
+```
+
+run unix/shell commands in go apps
+
+```
+go run exec.go
 ```
 
 demonstrate the power of multithreading / parallel computing  
