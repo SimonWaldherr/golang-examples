@@ -1,47 +1,47 @@
 #!/bin/bash
 
-go run HelloWorld.go
+go run ./beginner/HelloWorld.go
 
-go run var.go
+go run ./beginner/var.go
 
-go run array.go
+go run ./beginner/array.go
 
-go run for.go
+go run ./beginner/for.go
 
-go run args.go string string2
+go run ./beginner/args.go string string2
 
-go run input.go
+go run ./beginner/input.go
 
-go run pythagoras.go 10 15 ?
+go run ./beginner/time.go
 
-go run time.go
+go run ./beginner/random.go
 
-go run random.go
+go run ./beginner/cat.go
 
-go run cat.go
+go run ./beginner/if.go Hello
 
-go run if.go Hello
+go run ./beginner/modulo.go
 
-go run modulo.go
+go run ./beginner/split.go
 
-go run lifo.go
+go run ./advanced/pythagoras.go 10 15 ?
 
-go run split.go
+go run ./advanced/lifo.go
 
-go run splitbyregex.go
+go run ./advanced/splitbyregex.go
 
-go run fibonacci.go
+go run ./advanced/fibonacci.go
 
-go run prime.go 32
+go run ./advanced/prime.go 32
 
-go run json.go
+go run ./advanced/json.go
 
-go run httpd.go
+go run ./advanced/exec.go
 
-go run proxy.go
+go run ./expert/httpd.go
 
-go run exec.go
+go run ./expert/proxy.go
 
 export GOMAXPROCS=8
-time go run parallel.go true
-time go run parallel.go false
+time go run ./expert/parallel.go true
+time go run ./expert/parallel.go false
