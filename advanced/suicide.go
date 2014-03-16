@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	
 	pid := os.Getpid()
 	str := strconv.Itoa(pid)
 	fmt.Println("Process identifier: ", str)

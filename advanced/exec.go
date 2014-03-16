@@ -43,8 +43,8 @@ func main() {
 	grep2 := exec.Command("grep", "-o", "\\d\\d:\\d\\d:\\d\\d")
 	time, err2 := pipe_cmd(datecmd, grep2)
 
-	lscmd = exec.Command("ls")
-	grep3 := exec.Command("grep", "-o", "\\.[^ \\.]\\+")
+	lscmd = exec.Command("ls", "-ltraR", "../")
+	grep3 := exec.Command("grep", "-o", "[^ \\./]\\+\\.[^ \\./]\\+")
 	files, err3 := pipe_cmd(lscmd, grep3)
 
 	if err1 != nil {
