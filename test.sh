@@ -6,6 +6,8 @@ go run ./beginner/var.go
 
 go run ./beginner/array.go
 
+go run ./beginner/function.go
+
 go run ./beginner/for.go
 
 go run ./beginner/args.go string string2
@@ -38,6 +40,10 @@ go run ./advanced/json.go
 
 go run ./advanced/exec.go
 
+go run ./advanced/suicide.go
+
+go run ./expert/telnet.go
+
 go run ./expert/httpd.go
 
 go run ./expert/proxy.go
@@ -45,3 +51,5 @@ go run ./expert/proxy.go
 export GOMAXPROCS=8
 time go run ./expert/parallel.go true
 time go run ./expert/parallel.go false
+
+time go run ./expert/dynparallel.go 8

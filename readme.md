@@ -21,6 +21,8 @@ sudo apt-get install golang
 
 ## examples
 
+###beginner
+
 print Hello World with comments
 
 ```
@@ -39,6 +41,12 @@ declare array and print it's items
 go run array.go
 ```
 
+declare your own functions
+
+```
+go run function.go
+```
+
 do something multiple times
 
 ```
@@ -55,12 +63,6 @@ read via cli provided input data
 
 ```
 go run input.go
-```
-
-calculate triangles
-
-```
-go run pythagoras.go (float|?) (float|?) (float|?)
 ```
 
 return the current time/date in various formats
@@ -93,16 +95,24 @@ modulo operation finds the remainder of division
 go run modulo.go
 ```
 
-last in - first out - example
-
-```
-go run lifo.go
-```
-
 split a string by another string and make an array from the result
 
 ```
 go run split.go
+```
+
+###advanced
+
+calculate triangles
+
+```
+go run pythagoras.go (float|?) (float|?) (float|?)
+```
+
+last in - first out - example
+
+```
+go run lifo.go
 ```
 
 split a string via regular expression and make an array from the result
@@ -135,6 +145,26 @@ convert go object to json string
 go run json.go
 ```
 
+run unix/shell commands in go apps
+
+```
+go run exec.go
+```
+
+run a self killing app
+
+```
+go run suicide.go
+```
+
+###expert
+
+telnet with golang
+
+```
+go run telnet.go
+```
+
 the smallest golang http server
 
 ```
@@ -147,12 +177,6 @@ the smallest golang http proxy
 go run proxy.go
 ```
 
-run unix/shell commands in go apps
-
-```
-go run exec.go
-```
-
 demonstrate the power of multithreading / parallel computing  
 you have to set GOMAXPROCS to something greater than 1 to see any effect
 
@@ -160,6 +184,12 @@ you have to set GOMAXPROCS to something greater than 1 to see any effect
 export GOMAXPROCS=8
 time go run parallel.go true
 time go run parallel.go false
+```
+
+a dynamic amount of channels
+
+```
+time go run dynparallel.go 8
 ```
 
 ## compile
