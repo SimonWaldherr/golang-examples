@@ -35,6 +35,12 @@ declare variables and print them
 go run var.go
 ```
 
+if statement in golang
+
+```
+go run if.go Hello
+```
+
 declare array and print it's items
 
 ```
@@ -83,12 +89,6 @@ concat strings in two different ways
 go run cat.go
 ```
 
-if statement in golang
-
-```
-go run if.go Hello
-```
-
 modulo operation finds the remainder of division
 
 ```
@@ -131,6 +131,12 @@ calculate and print the requested (32th) prime number
 
 ```
 go run prime.go 32
+```
+
+do things with numbers, strings and switch-cases
+
+```
+go run numbers.go
 ```
 
 pop and push in golang

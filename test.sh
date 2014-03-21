@@ -4,6 +4,8 @@ go run ./beginner/HelloWorld.go
 
 go run ./beginner/var.go
 
+go run ./beginner/if.go Hello
+
 go run ./beginner/array.go
 
 go run ./beginner/function.go
@@ -20,8 +22,6 @@ go run ./beginner/random.go
 
 go run ./beginner/cat.go
 
-go run ./beginner/if.go Hello
-
 go run ./beginner/modulo.go
 
 go run ./beginner/split.go
@@ -35,6 +35,8 @@ go run ./advanced/splitbyregex.go
 go run ./advanced/fibonacci.go
 
 go run ./advanced/prime.go 32
+
+go run ./advanced/numbers.go
 
 go run ./advanced/json.go
 
