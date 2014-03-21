@@ -165,6 +165,12 @@ go run suicide.go
 
 ###expert
 
+convert from rgb to hsl
+
+```
+go run color.go
+```
+
 telnet with golang
 
 ```

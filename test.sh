@@ -44,6 +44,8 @@ go run ./advanced/exec.go
 
 go run ./advanced/suicide.go
 
+go run ./export/color.go
+
 go run ./expert/telnet.go
 
 go run ./expert/httpd.go
