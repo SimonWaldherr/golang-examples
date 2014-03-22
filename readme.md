@@ -204,6 +204,13 @@ a dynamic amount of channels
 time go run dynparallel.go 8
 ```
 
+run the compiler and comment each line which contains an error
+
+```
+go build gocomment.go
+./gocomment go-app.go
+```
+
 ## compile
 
 One great aspect of golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
