@@ -44,13 +44,17 @@ go run ./advanced/exec.go
 
 go run ./advanced/suicide.go
 
-go run ./export/color.go
+go run ./expert/color.go
 
 go run ./expert/telnet.go
 
 go run ./expert/httpd.go
 
 go run ./expert/proxy.go
+
+cd expert
+go run ./image.go
+cd ..
 
 export GOMAXPROCS=8
 time go run ./expert/parallel.go true
