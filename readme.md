@@ -1,5 +1,8 @@
 # Go Examples
 
+[![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/SimonWaldherr/ "Donate weekly to this project using Gittip") [![Flattr donate button](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](https://flattr.com/submit/auto?user_id=SimonWaldherr&url=http%3A%2F%2Fgithub.com%2FSimonWaldherr%2Fgolang-examples "Donate monthly to this project using Flattr")
+
+
 ## about
 
 My first contact with [golang](http://golang.org) was in 2009, but then we went different ways. Now i want work again with golang and help others with their first contact. These examples explain the basics of golang.  
@@ -215,6 +218,11 @@ convert a image to a grayscale and to a color inverted image
 
 ```
 go run image.go
+```
+
+```
+go run sqlite.go insert test
+go run sqlite.go select
 ```
 
 ## compile

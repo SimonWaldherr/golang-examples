@@ -54,6 +54,11 @@ go run ./expert/proxy.go
 
 cd expert
 go run ./image.go
+
+go get github.com/mxk/go-sqlite/sqlite3
+go run ./sqlite.go insert test
+go run ./sqlite.go select
+
 cd ..
 
 export GOMAXPROCS=8
