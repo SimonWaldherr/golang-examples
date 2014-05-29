@@ -1,23 +1,24 @@
 package main
 
 import (
+	"fmt"
 	"github.com/mxk/go-sqlite/sqlite3"
+	"os"
 	"strconv"
 	"time"
-	"fmt"
-	"os"
 )
 
 type Table struct {
-	Id int
+	Id   int
 	Text string
 	Time int64
 }
 
 func main() {
 	sql, _ := sqlite3.Open("./sqlite.sqlite")
+	mode := os.Args[1]
 	var qu Table
-	if os.Args[1] == "select" {
+	if mode == "select" {
 		q, err := sql.Query("SELECT * FROM \"main\".\"test\" ORDER BY id DESC LIMIT 1;")
 		if err != nil {
 			fmt.Printf("Error while getting data: %s\n", err)
@@ -31,8 +32,11 @@ func main() {
 			fmt.Println("Inserted on " + t.Format(time.RFC1123Z))
 		}
 	} else {
-		now := strconv.FormatInt(time.Now().Unix(), 10)
-		sql.Query("INSERT INTO \"main\".\"test\" (\"text\", \"time\") VALUES('" + os.Args[2] + "', '" + now + "')")
-		fmt.Println(os.Args[2] + " inserted")
+		if len(os.Args) > 2 {
+			data := os.Args[2]
+			now := strconv.FormatInt(time.Now().Unix(), 10)
+			sql.Query("INSERT INTO \"main\".\"test\" (\"text\", \"time\") VALUES('" + data + "', '" + now + "')")
+			fmt.Println(data + " inserted")
+		}
 	}
 }
