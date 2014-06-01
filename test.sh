@@ -50,6 +50,8 @@ go run ./expert/telnet.go
 
 go run ./expert/httpd.go
 
+go run ./expert/cookies.go
+
 go run ./expert/proxy.go
 
 cd expert
