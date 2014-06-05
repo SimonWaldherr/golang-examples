@@ -26,6 +26,8 @@ go run ./beginner/modulo.go
 
 go run ./beginner/split.go
 
+go run ./beginner/hashing.go
+
 go run ./advanced/pythagoras.go 10 15 ?
 
 go run ./advanced/lifo.go
@@ -53,6 +55,8 @@ go run ./expert/httpd.go
 go run ./expert/cookies.go
 
 go run ./expert/proxy.go
+
+go run ./export/ppk-crypto.go
 
 cd expert
 go run ./image.go

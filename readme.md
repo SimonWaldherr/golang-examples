@@ -189,13 +189,13 @@ go run httpd.go
 the smallest golang http proxy
 
 ```
-go run cookies.go
+go run proxy.go
 ```
 
 read and write cookies
 
 ```
-go run proxy.go
+go run cookies.go
 ```
 
 demonstrate the power of multithreading / parallel computing  
@@ -226,9 +226,23 @@ convert a image to a grayscale and to a color inverted image
 go run image.go
 ```
 
+sql (sqlite) golang example
+
 ```
 go run sqlite.go insert test
 go run sqlite.go select
+```
+
+public-key/asymmetric cryptography signing and validating
+
+```
+go run ppk-crypto.go
+```
+
+hashing (md5, sha) in go
+
+```
+go run hashing.go
 ```
 
 ## compile
