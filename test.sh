@@ -30,9 +30,11 @@ go run ./beginner/hashing.go
 
 go run ./advanced/pythagoras.go 10 15 ?
 
+go run ./advanced/wait.go
+
 go run ./advanced/lifo.go
 
-go run ./advanced/splitbyregex.go
+go run ./advanced/regex.go
 
 go run ./advanced/fibonacci.go
 

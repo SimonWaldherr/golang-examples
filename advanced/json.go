@@ -6,12 +6,28 @@ import (
 	"os"
 )
 
-var strarray = []string{"lorem", "ipsum", "dolor", "sit", "amet"}
+//var strings = []string{"lorem", "ipsum", "dolor", "sit", "amet"}
 
 func main() {
-	jsonData, err := json.Marshal(strarray)
+	
+	var strings []string
+	var jsonstring = `["lorem", "ipsum", "dolor", "sit", "amet"]`
+
+	//convert json bytes-string to object
+	err := json.Unmarshal([]byte(jsonstring), &strings)
+	
+	if err != nil {
+		fmt.Println("error while unmarshalling")
+		os.Exit(2)
+	}
+
+	fmt.Println(strings)
+
+	//convert object to bytes-string
+	jsonData, err := json.Marshal(strings)
 
 	if err != nil {
+		fmt.Println("error while marshalling")
 		os.Exit(2)
 	}
 

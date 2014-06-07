@@ -112,6 +112,12 @@ calculate triangles
 go run pythagoras.go (float|?) (float|?) (float|?)
 ```
 
+wait and sleep
+
+```
+go run wait.go
+```
+
 last in - first out - example
 
 ```
@@ -121,7 +127,7 @@ go run lifo.go
 split a string via regular expression and make an array from the result
 
 ```
-go run splitbyregex.go
+go run regex.go
 ```
 
 calculate and print the fibonacci numbers
