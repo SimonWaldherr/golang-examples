@@ -6,9 +6,13 @@ import (
 	"net"
 	"os"
 	"strings"
+	"time"
 )
 
 func handleConnection(c net.Conn, msgchan chan<- string) {
+	defer c.Close()
+	fmt.Printf("Connection from %v established.\n", c.RemoteAddr())
+	c.SetReadDeadline(time.Now().Add(time.Second * 5))
 	buf := make([]byte, 4096)
 	for {
 		n, err := c.Read(buf)
@@ -18,13 +22,18 @@ func handleConnection(c net.Conn, msgchan chan<- string) {
 		}
 		msgchan <- string(buf[0:n])
 	}
+	time.Sleep(150 * time.Millisecond)
 	fmt.Printf("Connection from %v closed.\n", c.RemoteAddr())
+	c.Close()
+	return
 }
 
 func printMessages(msgchan <-chan string) {
+	var count int = 0
 	for {
 		msg := strings.TrimSpace(<-msgchan)
-		fmt.Printf("data: %s\n", msg)
+		count++
+		fmt.Printf("Data %d: %s\n", count, msg)
 	}
 }
 
