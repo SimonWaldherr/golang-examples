@@ -74,6 +74,12 @@ read via cli provided input data
 go run input.go
 ```
 
+return the *working directory*
+
+```
+go run dir.go
+```
+
 return the current time/date in various formats
 
 ```

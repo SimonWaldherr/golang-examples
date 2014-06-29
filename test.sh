@@ -16,6 +16,8 @@ go run ./beginner/args.go string string2
 
 go run ./beginner/input.go
 
+go run ./beginner/dir.go
+
 go run ./beginner/time.go
 
 go run ./beginner/random.go
