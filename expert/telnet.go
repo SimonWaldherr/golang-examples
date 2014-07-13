@@ -41,7 +41,7 @@ func main() {
 	flag.Parse()
 	port := ":" + flag.Arg(0)
 	if port == ":" {
-		port = ":23"
+		port = ":2223"
 	}
 	ln, err := net.Listen("tcp", port)
 	if err != nil {

@@ -198,6 +198,12 @@ the smallest golang http server
 go run httpd.go
 ```
 
+secure golang http server
+
+```
+go run httpsd.go
+```
+
 the smallest golang http proxy
 
 ```
