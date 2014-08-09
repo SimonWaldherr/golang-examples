@@ -74,6 +74,12 @@ read via cli provided input data
 go run input.go
 ```
 
+read named argument input data
+
+```
+go run flag.go
+```
+
 return the *working directory*
 
 ```
@@ -108,6 +114,18 @@ split a string by another string and make an array from the result
 
 ```
 go run split.go
+```
+
+an example implementation of the Ackermann function
+
+```
+go run ackermann.go
+```
+
+an example implementation of the Euclidean algorithm
+
+```
+go run euklid.go
 ```
 
 ###advanced

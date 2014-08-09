@@ -34,6 +34,9 @@ go run ./beginner/args.go string string2
 echo "input"
 go run ./beginner/input.go
 
+echo "flag"
+go run ./beginner/flag.go
+
 echo "dir"
 go run ./beginner/dir.go
 
@@ -54,6 +57,12 @@ go run ./beginner/split.go
 
 echo "hashing"
 go run ./beginner/hashing.go
+
+echo "ackermann"
+go run ./beginner/ackermann.go
+
+echo "euklid"
+go run ./beginner/euklid.go
 
 echo "advanced"
 echo "pythagoras"
