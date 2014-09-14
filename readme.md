@@ -24,6 +24,9 @@ sudo apt-get install golang
 
 ## examples
 
+The examples are divided into three levels of difficulty. [beginner](https://github.com/SimonWaldherr/golang-examples#beginner) contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. [advanced](https://github.com/SimonWaldherr/golang-examples#advanced) uses more complicated features of golang. [expert](https://github.com/SimonWaldherr/golang-examples#expert) contains applications like telnet-clients or http-server (even with SSL).  
+If you want even more golang examples, you can take a look at my other go repositories at github: [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization), [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go), [cgol.go](https://github.com/SimonWaldherr/cgol.go), [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo), [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
+
 ###beginner
 
 print Hello World with comments
