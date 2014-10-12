@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var x int64
+var x uint64
 
 func main() {
 	start := time.Now()
@@ -16,14 +16,14 @@ func main() {
 	s := flag.Arg(0)
 
 	if s == "" {
-		s = "10"
+		s = "140"
 	}
 
-	x, err := strconv.ParseInt(s, 10, 0)
+	x, err := strconv.ParseUint(s, 10, 0)
 
 	if err != nil {
 		fmt.Println(err)
-		x = 10
+		x = 40
 	}
 
 	fibonacci(x)
@@ -31,11 +31,11 @@ func main() {
 	fmt.Println("\ntime:", elapsed)
 }
 
-func fibonacci(n int64) {
-	var a int64 = 0
-	var b int64 = 1
-	var i int64
-	var sum int64
+func fibonacci(n uint64) {
+	var a uint64 = 0
+	var b uint64 = 1
+	var i uint64
+	var sum uint64
 	for i = 0; i < n; i++ {
 		fmt.Println(a)
 		sum = a + b
