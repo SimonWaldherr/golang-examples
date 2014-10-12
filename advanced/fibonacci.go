@@ -2,10 +2,10 @@ package main
 
 // import required modules
 import (
-	"fmt"
 	"flag"
-	"time"
+	"fmt"
 	"strconv"
+	"time"
 )
 
 var x int64

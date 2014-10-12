@@ -9,13 +9,13 @@ import (
 //var strings = []string{"lorem", "ipsum", "dolor", "sit", "amet"}
 
 func main() {
-	
+
 	var strings []string
 	var jsonstring = `["lorem", "ipsum", "dolor", "sit", "amet"]`
 
 	//convert json bytes-string to object
 	err := json.Unmarshal([]byte(jsonstring), &strings)
-	
+
 	if err != nil {
 		fmt.Println("error while unmarshalling")
 		os.Exit(2)

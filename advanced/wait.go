@@ -28,8 +28,8 @@ func main() {
 	go f(&w, 4)
 
 	w.Wait()
-	
+
 	time.Sleep(900000000 * time.Nanosecond)
-	
+
 	fmt.Println("finish")
 }

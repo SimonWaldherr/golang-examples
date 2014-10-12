@@ -1,10 +1,10 @@
 package main
 
 import (
-	"os"
 	"fmt"
-	"strconv"
+	"os"
 	"os/exec"
+	"strconv"
 )
 
 func main() {
