@@ -1,15 +1,15 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 )
 
 func main() {
 	//arguments
 	if 1 < len(os.Args) {
-		fmt.Print(len(os.Args)-1)
+		fmt.Print(len(os.Args) - 1)
 		fmt.Println(" arguments provided")
 	}
 

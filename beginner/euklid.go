@@ -1,14 +1,14 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 	"strconv"
 )
 
 func euklid(a, b int64) int64 {
 	for b != 0 {
-		a, b = b, a % b
+		a, b = b, a%b
 	}
 	return a
 }

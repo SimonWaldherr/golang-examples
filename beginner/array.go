@@ -18,7 +18,7 @@ func main() {
 
 		// print the $th value of the intarray and the strarray
 		fmt.Println(intarray[i], "\t", strarray[i])
-		
+
 		mapone[intarray[i]] = strarray[i]
 		maptwo[strarray[i]] = mapone
 	}

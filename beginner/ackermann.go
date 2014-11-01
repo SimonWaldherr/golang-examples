@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 	"strconv"
 )
 
@@ -11,7 +11,7 @@ func ack(n, m int64) int64 {
 		if m == 0 {
 			m = 1
 		} else {
-			m = ack(n, m - 1)
+			m = ack(n, m-1)
 		}
 		n = n - 1
 	}

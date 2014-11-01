@@ -108,7 +108,7 @@ func main() {
 
 		config := tls.Config{
 			Certificates: []tls.Certificate{cert},
-			MinVersion: tls.VersionTLS10,
+			MinVersion:   tls.VersionTLS10,
 		}
 		config.Rand = rand.Reader
 		port := ":4443"
