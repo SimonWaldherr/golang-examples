@@ -17,7 +17,7 @@ Ordinal date:					2014-305
 */
 
 var input string
-var r = regexp.MustCompile("(?P<date>\\d{4}(\\-W\\d{1,2}(\\-\\d)?|\\-\\d{2}\\-\\d{2}(T\\d{2}:\\d{2}(:\\d{2}(\\+\\d{2}:\\d{2}Z?)?)?)?|\\-\\d{1,3}))")
+var r = regexp.MustCompile("(?P<ISO8601>(?P<year>\\d{4})(\\-W((?P<week>\\d{1,2})\\-(?P<weekday>\\d)?)|\\-(?P<month>\\d{2})\\-(?P<day>\\d{2})(T(?P<hour>\\d{2}):(?P<min>\\d{2})(:(?P<sec>\\d{2})(\\+\\d{2}:\\d{2}Z?)?)?)?|\\-(?P<yearday>\\d{1,3})))")
 
 func main() {
 	input = `
@@ -30,8 +30,14 @@ func main() {
 2014-305
 2014-23
 `
-	date := r.FindAllStringSubmatch(input, -1)
-	for i := 0; i < len(date); i++ {
-		fmt.Printf("ISO8601-Date: %#v\n", date[i])
+	match := r.FindAllString(input, -1)
+	for i := 0; i < len(match); i++ {
+		submatch := r.FindStringSubmatch(match[i])
+		fmt.Printf("\nInput: %#v\n", match[i])
+		for i, name := range r.SubexpNames() {
+			if name != "" && submatch[i] != "" {
+				fmt.Printf("\t%s\t %s\n", name, submatch[i])
+			}
+		}
 	}
 }
