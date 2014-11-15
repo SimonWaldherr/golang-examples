@@ -108,7 +108,10 @@ func main() {
 
 		config := tls.Config{
 			Certificates: []tls.Certificate{cert},
+			//MinVersion:   tls.VersionSSL30, //don't use SSLv3, https://www.openssl.org/~bodo/ssl-poodle.pdf
 			MinVersion:   tls.VersionTLS10,
+			//MinVersion:   tls.VersionTLS11,
+			//MinVersion:   tls.VersionTLS12,
 		}
 		config.Rand = rand.Reader
 		port := ":4443"
