@@ -10,7 +10,7 @@ func readStdin(out chan string, in chan bool) {
 	//no buffering
 	exec.Command("stty", "-f", "/dev/tty", "cbreak", "min", "1").Run()
 	//no visible output
-	//exec.Command("stty", "-f", "/dev/tty", "-echo").Run()
+	exec.Command("stty", "-f", "/dev/tty", "-echo").Run()
 
 	var b []byte = make([]byte, 1)
 	for {
@@ -25,6 +25,9 @@ func readStdin(out chan string, in chan bool) {
 }
 
 func main() {
+	defer func() {
+		exec.Command("stty", "-f", "/dev/tty", "echo").Run()
+	}()
 	stdin := make(chan string, 1)
 	kill := make(chan bool, 1)
 	var count int = 0
@@ -42,6 +45,7 @@ func main() {
 			break
 		}
 
+		fmt.Print(str)
 		input += str
 		count++
 
