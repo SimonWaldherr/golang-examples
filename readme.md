@@ -41,6 +41,12 @@ declare variables and print them
 go run var.go
 ```
 
+various ways (and styles) to print variables
+
+```
+go run printf.go
+```
+
 if statement in golang
 
 ```
@@ -75,6 +81,12 @@ read via cli provided input data
 
 ```
 go run input.go
+```
+
+or scan for it
+
+```
+go run scan.go
 ```
 
 read named argument input data
@@ -131,12 +143,54 @@ an example implementation of the Euclidean algorithm
 go run euklid.go
 ```
 
+make pipeable unix applications with os.Stdin
+
+```
+go run pipe.go
+```
+
+submit a function as argument
+
+```
+go run functioncallback.go
+```
+
+a function returned by a function
+
+```
+go run functionclosure.go
+```
+
+i don't know how many arguments i will need
+
+```
+go run functionvariadic.go
+```
+
+empty interface as argument (You Don't Know Type)
+
+```
+go run interfaces.go
+```
+
+make structs (objects) which have functions
+
+```
+go run oop.go
+```
+
 ###advanced
 
 calculate triangles
 
 ```
 go run pythagoras.go (float|?) (float|?) (float|?)
+```
+
+read from stdin (but don't wait for the enter key)
+
+```
+go run getchar.go
 ```
 
 wait and sleep
@@ -155,6 +209,12 @@ split a string via regular expression and make an array from the result
 
 ```
 go run regex.go
+```
+
+more advanced regex (with time and dates)
+
+```
+go run regex2.go
 ```
 
 calculate and print the fibonacci numbers
@@ -181,6 +241,24 @@ pop and push in golang
 go run lifo.go
 ```
 
+list files in working directory
+
+```
+go run explorer.go
+```
+
+start a ticker (do things periodically)
+
+```
+go run ticker.go
+```
+
+do something in case of a timeout
+
+```
+go run timeout.go
+```
+
 convert go object to json string
 
 ```
@@ -191,6 +269,18 @@ run unix/shell commands in go apps
 
 ```
 go run exec.go
+```
+
+compress by pipe
+
+```
+go run compress.go
+```
+
+compress by file
+
+```
+go run compress2.go
 ```
 
 run a self killing app

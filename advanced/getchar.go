@@ -47,6 +47,10 @@ func main() {
 
 		if count%10 == 0 {
 			fmt.Printf("\n\nyou typed %v keys, quit the demo by pressing \"q\"\n\n", count)
+			if count == 600 {
+				fmt.Printf("Don't waste your time! Do something meaningful!")
+				break
+			}
 		}
 	}
 	fmt.Printf("\n\nyou typed %v keys before you quit the program\n", count)
