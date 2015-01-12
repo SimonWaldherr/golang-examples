@@ -5,7 +5,9 @@
 
 ## about
 
-My first contact with [golang](http://golang.org) was in 2009, but then we went different ways. Now i want work again with golang and help others with their first contact. These examples explain the basics of golang.  
+My first contact with [golang](http://golang.org) was in 2009, but then we went different ways. 
+Now i want work again with golang and help others with their *first contact*. 
+These examples explain the basics of golang.  
 There will be more examples from time to time.
 
 ## install go(lang)
@@ -25,7 +27,25 @@ sudo apt-get install golang
 ## examples
 
 The examples are divided into three levels of difficulty. [beginner](https://github.com/SimonWaldherr/golang-examples#beginner) contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. [advanced](https://github.com/SimonWaldherr/golang-examples#advanced) uses more complicated features of golang. [expert](https://github.com/SimonWaldherr/golang-examples#expert) contains applications like telnet-clients or http-server (even with SSL).  
-If you want even more golang examples, you can take a look at my other go repositories at github: [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization), [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go), [cgol.go](https://github.com/SimonWaldherr/cgol.go), [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo), [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
+If you want even more golang examples, you can take a look at my other go repositories at github:  
+
+* [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization) visualizes various sorting algorithms on the terminal or as gif
+* [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) currently only contains a snake clone
+* [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a mandelbrot fractal and saves it as png
+* [golibs](https://github.com/SimonWaldherr/golibs) contains various Go packages (e.g. math, converter, stack, cli, ...)
+* [cgol.go](https://github.com/SimonWaldherr/cgol.go) is conways game of life in Golang
+* [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
+* [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
+* [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
+
+all of them are published as free and open source software.
+
+If all of this is even not enough for you, you can take a look at the following websites:
+
+* [tour.golang.org](https://tour.golang.org/)
+* [Go by example](https://gobyexample.com/)
+* [Golang Book](http://www.golang-book.com/)
+* [Go-Learn](https://github.com/skippednote/Go-Learn)
 
 ###beginner
 
