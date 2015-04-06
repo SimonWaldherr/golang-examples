@@ -9,5 +9,5 @@ func PublicFunc(value int) int { //this is a exported function
 }
 
 func PlusOne(value int) int { //and another one
-	return value+1
+	return value + 1
 }
