@@ -19,6 +19,7 @@ func readStdin(out chan string, in chan bool) {
 			return
 		default:
 			os.Stdin.Read(b)
+			fmt.Printf(">>> %v: ", b)
 			out <- string(b)
 		}
 	}
@@ -45,7 +46,7 @@ func main() {
 			break
 		}
 
-		fmt.Print(str)
+		fmt.Println(str)
 		input += str
 		count++
 
