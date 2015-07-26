@@ -67,7 +67,7 @@ func main() {
 	if (f1(true) && f2(true)) || f3(false) {
 		fmt.Println("✔")
 	}
-	
+
 	fmt.Println("\nAND+(OR)")
 	if f1(true) && (f2(false) || f3(true)) {
 		fmt.Println("✔")
