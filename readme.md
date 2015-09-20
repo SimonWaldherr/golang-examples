@@ -49,10 +49,20 @@ If all of this is even not enough for you, you can take a look at the following 
 
 ###beginner
 
+To execute a **golang** program, write ```go run``` at the cli followed by the name of the file.
+You also can convert the file to a binary executable program by the command ```go build```.
+If you know ```#!```, also known as [Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)), there is an equivalent for go: ```//usr/bin/env go run $0 $@ ; exit```
+
 print Hello World with comments
 
 ```
 go run HelloWorld.go
+```
+
+print Hello World with comments (shebang version)
+
+```
+./HelloWorldShebang.go
 ```
 
 declare variables and print them
