@@ -252,6 +252,12 @@ more advanced regex (with time and dates)
 go run regex2.go
 ```
 
+use my [golibs regex package](https://github.com/SimonWaldherr/golibs#regex-----)
+
+```
+go run regex3.go
+```
+
 calculate and print the fibonacci numbers
 
 ```
