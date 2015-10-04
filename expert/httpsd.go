@@ -94,9 +94,9 @@ func main() {
 		}
 	}
 	if _, err := os.Stat(key); err == nil {
-		ca_b, _ := ioutil.ReadFile("cert.pem")
+		ca_b, _ := ioutil.ReadFile(pem)
 		ca, _ := x509.ParseCertificate(ca_b)
-		priv_b, _ := ioutil.ReadFile("cert.key")
+		priv_b, _ := ioutil.ReadFile(key)
 		priv, _ := x509.ParsePKCS1PrivateKey(priv_b)
 		pool := x509.NewCertPool()
 		pool.AddCert(ca)
