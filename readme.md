@@ -422,7 +422,7 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## license
 
-Copyright © 2014 Simon Waldherr  
+Copyright © 2015 Simon Waldherr  
 dual-licensed  
 
 ###MIT
