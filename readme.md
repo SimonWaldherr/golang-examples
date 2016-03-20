@@ -332,6 +332,14 @@ go run suicide.go
 
 ###expert
 
+calculate π with go (leibniz, euler and prime are running until you stop it via CTRL+C)
+
+```
+go run pi2go.go leibniz
+go run pi2go.go euler
+go run pi2go.go prime
+```
+
 convert from rgb to hsl
 
 ```
