@@ -29,6 +29,16 @@ sudo apt-get install golang
 or  
 [compile it yourself](https://golang.org/doc/install/source)  
 
+## Nitrous Quickstart
+
+You can quickly create a free development environment for this Go Examples project in the cloud on www.nitrous.io:
+
+<a href="https://www.nitrous.io/quickstart">
+  <img src="https://nitrous-image-icons.s3.amazonaws.com/quickstart.png" alt="Nitrous Quickstart" width=142 height=34>
+</a>
+
+To run the program, simply run `go run {file}.go` in `~/code/golang-examples`.
+
 ## examples
 
 The examples are divided into three levels of difficulty. [beginner](https://github.com/SimonWaldherr/golang-examples#beginner) contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. [advanced](https://github.com/SimonWaldherr/golang-examples#advanced) uses more complicated features of golang. [expert](https://github.com/SimonWaldherr/golang-examples#expert) contains applications like telnet-clients or http-server (even with SSL).  
