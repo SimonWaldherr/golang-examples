@@ -52,7 +52,7 @@ If all of this is even not enough for you, you can take a look at the following 
 * [Golang Book](http://www.golang-book.com/)
 * [Go-Learn](https://github.com/skippednote/Go-Learn)
 
-###beginner
+### beginner
 
 To execute a **golang** program, write ```go run``` at the cli followed by the name of the file.
 You also can convert the file to a binary executable program by the command ```go build```.
@@ -214,7 +214,7 @@ make structs (objects) which have functions
 go run oop.go
 ```
 
-###advanced
+### advanced
 
 calculate triangles
 
@@ -330,7 +330,7 @@ run a self killing app
 go run suicide.go
 ```
 
-###expert
+### expert
 
 calculate π with go (leibniz, euler and prime are running until you stop it via CTRL+C)
 
@@ -433,7 +433,7 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 Copyright © 2015 Simon Waldherr  
 dual-licensed  
 
-###MIT
+### MIT
 
 The [MIT License](http://opensource.org/licenses/MIT)  
 
@@ -443,7 +443,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-###CC
+### CC
 
 [cc by sa](http://creativecommons.org/licenses/by-sa/4.0/)  
 
