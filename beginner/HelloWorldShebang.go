@@ -3,6 +3,6 @@
 package main
 
 func main() {
-  // print string
-  print("Hello World\n")
+	// print string
+	print("Hello World\n")
 }

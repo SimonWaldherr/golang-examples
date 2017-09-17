@@ -1,3 +1,10 @@
 *.key
 *.pem
 *.o
+.DS_Store
+.idea
+-trash
+/expert/hist
+/expert/.swp
+/expert/inv.png
+/expert/gray.png

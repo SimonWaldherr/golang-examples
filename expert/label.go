@@ -27,9 +27,9 @@ func ContinueExample() {
 }
 
 func ContinueToLabelExample() {
-  var i, j int
+	var i, j int
 	fmt.Println("\n\nContinue to Label Example")
-	OUT:
+OUT:
 	for i = 0; i < 10; i++ {
 		for j = 0; j < 10; j++ {
 			fmt.Print("\ni:", i, "j:", j)

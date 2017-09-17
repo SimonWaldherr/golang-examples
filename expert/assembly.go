@@ -1,10 +1,10 @@
 package main
 
 import (
-  assembly "./assembly"
-  "fmt"
+	assembly "./assembly"
+	"fmt"
 )
 
 func main() {
-  fmt.Println(assembly.Add(32,64))
+	fmt.Println(assembly.Add(32, 64))
 }

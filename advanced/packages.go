@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./packages/"                                   //import a "local" package folder (package name: foobar)
+	"./packages"                                    //import a "local" package folder (package name: foobar)
 	"fmt"                                           //import a standard package
 	"github.com/simonwaldherr/golibs/as"            //the path to the package
 	convert_to "github.com/simonwaldherr/golibs/as" //with a different name
