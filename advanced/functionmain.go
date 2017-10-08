@@ -11,10 +11,11 @@ func init() {
 }
 
 func main() {
+	RESTART:
 	fmt.Println("the main function gets called immediately after")
 	if i < 3 {
 		i++
 		fmt.Println("we can also call the main function ourself (but not init)")
-		main()
+		goto RESTART
 	}
 }
