@@ -3,10 +3,10 @@ package main
 import (
 	"bufio"
 	"encoding/csv"
-	"strings"
 	"fmt"
 	"io"
 	"os"
+	"strings"
 )
 
 func fixedLengthBefore(str string, spacer string, length int) string {
@@ -44,7 +44,7 @@ func convertCSVtoMD(filename string) string {
 		data[row] = record
 		row++
 	}
-	
+
 	var md string
 	var mdHeader string
 	header := true

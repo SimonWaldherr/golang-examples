@@ -3,18 +3,18 @@ package main
 import "fmt"
 
 /**
-  * Thanks https://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm
-  *
-  * @param int weeks
-  * @param array teams
-  * @return array
-  */
+ * Thanks https://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm
+ *
+ * @param int weeks
+ * @param array teams
+ * @return array
+ */
 // added return type to the end
 func schedule(weeks int, teams []int) [][][]int {
 
 	//Check if team count is odd, if so we add a 'bye'
-	if len(teams) % 2 != 0 {
-		teams = append(teams, len(teams) + 1)
+	if len(teams)%2 != 0 {
+		teams = append(teams, len(teams)+1)
 	}
 
 	halfTeams := len(teams) / 2

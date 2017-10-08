@@ -11,7 +11,7 @@ func init() {
 }
 
 func main() {
-	RESTART:
+RESTART:
 	fmt.Println("the main function gets called immediately after")
 	if i < 3 {
 		i++
