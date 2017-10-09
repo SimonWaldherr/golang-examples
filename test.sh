@@ -64,6 +64,12 @@ go run ./beginner/ackermann.go
 echo "euklid"
 go run ./beginner/euklid.go
 
+echo "variadic function"
+go run ./beginner/functionvariadic.go
+
+echo "delete fom slice"
+go run ./beginner/deleteFromSlice.go
+
 echo "advanced"
 echo "pythagoras"
 go run ./advanced/pythagoras.go 10 15 ?
