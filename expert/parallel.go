@@ -5,6 +5,57 @@ import (
 	"os"
 )
 
+var (
+	// list of nth prime numbers to find
+	requests = []int{200000, 500000, 100000, 250000, 550000, 150000, 350000, 300000}
+)
+
+func main() {
+	if len(os.Args) == 1 {
+		fmt.Println("start this application with the argument true to compute primenumbers parallel or false for serial")
+		fmt.Println("you can configure the maximum processes/threads amount with: \"export GOMAXPROCS=$number\"")
+		os.Exit(1)
+	}
+
+	if os.Args[1] == "true" {
+		runParallel()
+	} else {
+		runSequential()
+	}
+}
+
+func runSequential() {
+	for _, index := range requests {
+		fmt.Printf("the %dth prime number is: %d\n", index, getPrime(index))
+	}
+}
+
+func runParallel() {
+	// data struct that goroutines will send information
+	// back to main thread
+	type WorkerResponse struct {
+		Index int
+		Prime int
+	}
+
+	workerChan := make(chan WorkerResponse)
+	defer close(workerChan)
+
+	// send requests to n goroutines
+	for _, index := range requests {
+		// start this goroutine with the index in the loop
+		// we must give this param, because index would be shared memory
+		go func(idx int) {
+			workerChan <- WorkerResponse{Index: idx, Prime: getPrime(idx)}
+		}(index)
+	}
+
+	for i := 0; i < len(requests); i++ {
+		response := <-workerChan
+		fmt.Printf("the %dth prime number is: %d\n", response.Index, response.Prime)
+	}
+}
+
 func Sqrt(n int) int {
 	var t uint
 	var b uint
@@ -48,93 +99,4 @@ func getPrime(n int) int {
 		num = num + 2
 	}
 	return primeList[n-1]
-}
-
-func main() {
-	if len(os.Args) == 1 {
-		fmt.Println("start this application with the argument true to compute primenumbers parallel or false for serial")
-		fmt.Println("you can configure the maximum processes/threads amount with: \"export GOMAXPROCS=$number\"")
-	} else {
-		if os.Args[1] == "true" {
-			prime0 := make(chan int)
-			prime1 := make(chan int)
-			prime2 := make(chan int)
-			prime3 := make(chan int)
-			prime4 := make(chan int)
-			prime5 := make(chan int)
-			prime6 := make(chan int)
-			prime7 := make(chan int)
-			go func() {
-				prime0 <- getPrime(200000)
-			}()
-			go func() {
-				prime1 <- getPrime(500000)
-			}()
-			go func() {
-				prime2 <- getPrime(100000)
-			}()
-			go func() {
-				prime3 <- getPrime(250000)
-			}()
-			go func() {
-				prime4 <- getPrime(550000)
-			}()
-			go func() {
-				prime5 <- getPrime(150000)
-			}()
-			go func() {
-				prime6 <- getPrime(350000)
-			}()
-			go func() {
-				prime7 <- getPrime(300000)
-			}()
-
-			for i := 0; i < 8; i++ {
-				select {
-				case msg0 := <-prime0:
-					fmt.Print("the 200000th prime number is: ")
-					fmt.Println(msg0)
-				case msg1 := <-prime1:
-					fmt.Print("the 500000th prime number is: ")
-					fmt.Println(msg1)
-				case msg2 := <-prime2:
-					fmt.Print("the 100000th prime number is: ")
-					fmt.Println(msg2)
-				case msg3 := <-prime3:
-					fmt.Print("the 250000th prime number is: ")
-					fmt.Println(msg3)
-				case msg4 := <-prime4:
-					fmt.Print("the 550000th prime number is: ")
-					fmt.Println(msg4)
-				case msg5 := <-prime5:
-					fmt.Print("the 150000th prime number is: ")
-					fmt.Println(msg5)
-				case msg6 := <-prime6:
-					fmt.Print("the 350000th prime number is: ")
-					fmt.Println(msg6)
-				case msg7 := <-prime7:
-					fmt.Print("the 300000th prime number is: ")
-					fmt.Println(msg7)
-				}
-			}
-		}
-		if os.Args[1] == "false" {
-			fmt.Print("the 200000th prime number is: ")
-			fmt.Println(getPrime(200000))
-			fmt.Print("the 500000th prime number is: ")
-			fmt.Println(getPrime(500000))
-			fmt.Print("the 100000th prime number is: ")
-			fmt.Println(getPrime(100000))
-			fmt.Print("the 250000th prime number is: ")
-			fmt.Println(getPrime(250000))
-			fmt.Print("the 550000th prime number is: ")
-			fmt.Println(getPrime(550000))
-			fmt.Print("the 150000th prime number is: ")
-			fmt.Println(getPrime(150000))
-			fmt.Print("the 350000th prime number is: ")
-			fmt.Println(getPrime(350000))
-			fmt.Print("the 300000th prime number is: ")
-			fmt.Println(getPrime(300000))
-		}
-	}
 }
