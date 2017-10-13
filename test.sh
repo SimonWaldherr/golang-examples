@@ -28,6 +28,9 @@ go run ./beginner/function.go
 echo "for"
 go run ./beginner/for.go
 
+echo "foreach"
+go run ./beginner/foreach.go
+
 echo "args"
 go run ./beginner/args.go string string2
 
