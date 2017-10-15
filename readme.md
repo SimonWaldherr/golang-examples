@@ -216,6 +216,14 @@ go run oop.go
 
 ### Advanced
 
+Bcrypt hashing example
+
+Please install package golang.org/x/crypto/bcrypt before run this file by running `go get golang.org/x/crypto/bcrypt`
+
+```
+go run bcrypt.go
+```
+
 Calculate triangles
 
 ```
