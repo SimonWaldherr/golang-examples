@@ -6,10 +6,11 @@
 
 ## About
 
-My first contact with [golang](http://golang.org) was in 2009, but then we went different ways. 
-Now i want work again with golang and help others with their *first contact*. 
-These examples explain the basics of golang.  
-There will be more examples from time to time.
+My first contact with [golang](http://golang.org) was in 2009, but then we went different ways.  
+Now i want work again with golang and help others with their *first contact*.  
+These examples explain the basics of golang. There will be more examples from time to time.  
+
+if you like, feel free to add more golang examples. Many thanks to all [contributors](https://github.com/SimonWaldherr/golang-examples/graphs/contributors).
 
 ## Install go(lang)
 
@@ -438,5 +439,5 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2015 Simon Waldherr  
+Copyright © 2017 Simon Waldherr  
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.  
