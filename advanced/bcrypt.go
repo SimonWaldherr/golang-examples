@@ -2,17 +2,14 @@ package main
 
 import (
 	"fmt"
+
 	"golang.org/x/crypto/bcrypt"
 )
-
-// Hashing cost for bcrypt, higher is better but will slow to create and compare hash
-// Minimum cost is 4
-const HashingCost = 8
 
 // Will create hash password
 // It should never panic if plainText is given properly
 func CreateHash(plainText string) (hashText string) {
-	passwordHashInBytes, err := bcrypt.GenerateFromPassword([]byte(plainText), HashingCost)
+	passwordHashInBytes, err := bcrypt.GenerateFromPassword([]byte(plainText), bcrypt.DefaultCost)
 	if err != nil {
 		panic(err)
 	}
