@@ -217,6 +217,12 @@ go run oop.go
 
 ### Advanced
 
+AES-GCM encryption example
+
+```
+go run aesgcm.go
+```
+
 Bcrypt hashing example
 
 Please install package golang.org/x/crypto/bcrypt before run this file by running `go get golang.org/x/crypto/bcrypt`
