@@ -231,6 +231,12 @@ Please install package golang.org/x/crypto/bcrypt before run this file by runnin
 go run bcrypt.go
 ```
 
+Search element is exist in arrays or not
+
+```
+go run in_array.go
+```
+
 Calculate triangles
 
 ```

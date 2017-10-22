@@ -104,6 +104,9 @@ go run ./advanced/exec.go
 echo "suicide"
 go run ./advanced/suicide.go
 
+echo "in array search"
+go run ./advanced/in_array.go
+
 echo "expert"
 echo "color"
 go run ./expert/color.go
