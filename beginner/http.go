@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"http"
+	"net/http"
 	"io/ioutil"
 	"os"
 )
 
 func main() {
-	response, _, err := http.Get("http://golang.org/") // Send a HTTP GET request to the URL
+	response, err := http.Get("http://golang.org/") // Send a HTTP GET request to the URL
 	if err != nil {
 		fmt.Printf("%s", err) // If there is an error, print it and exit
 		os.Exit(1)
