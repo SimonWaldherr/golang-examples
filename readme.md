@@ -1,13 +1,7 @@
 # Go Examples
 
-[![Flattr donate button](https://img.shields.io/badge/donate%20via-flattr-green.svg)](https://flattr.com/submit/auto?user_id=SimonWaldherr&url=http%3A%2F%2Fgithub.com%2FSimonWaldherr%2Fgolang-examples "Donate monthly to this project using Flattr") 
-[![PayPal donate button](https://img.shields.io/badge/donate%20via-paypal-blue.svg)](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me")
-
-
 ## About
-
-My first contact with [golang](http://golang.org) was in 2009, but then we went different ways.  
-Now i want work again with golang and help others with their *first contact*.  
+ 
 These examples explain the basics of golang. There will be more examples from time to time.  
 
 if you like, feel free to add more golang examples. Many thanks to all [contributors](https://github.com/SimonWaldherr/golang-examples/graphs/contributors).
@@ -453,3 +447,19 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 Copyright © 2017 Simon Waldherr  
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.  
+
+## Support me
+
+if you like what i do
+feel free to support me
+
+you can do so by:
+
+* [donate via PayPal](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me")
+* buy me a beer at a conference
+* give me a job where i can work on open source projects
+* click on these ads (powered by [codesponsor.io](https://codesponsor.io/))
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples.svg' />
+</a>
