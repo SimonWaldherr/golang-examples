@@ -455,9 +455,10 @@ feel free to support me
 
 you can do so by:
 
-* [donate via PayPal](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me")
+* [donate via PayPal](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me") or [liberaPay](https://liberapay.com/SimonWaldherr/donate "Donate using Liberapay")
 * buy me a beer at a conference
 * give me a job where i can work on open source projects
+
 
 <a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples'>
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples.svg' />
