@@ -213,6 +213,14 @@ go run oop.go
 
 ### Advanced
 
+Benchmarking example (using JSON marshal and unmarshal for the sample)
+
+From the root directory (`$GOPATH/github.com/SimonWaldherr/golang-examples`), run this command:
+
+```
+go test -bench=. -benchmem advanced/json_bench/main_test.go
+```
+
 AES-GCM encryption example
 
 ```

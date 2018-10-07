@@ -107,6 +107,10 @@ go run ./advanced/suicide.go
 echo "in array search"
 go run ./advanced/in_array.go
 
+echo "benchmarking json marshal and unmarshal"
+go test -bench=. -benchmem ./advanced/json_bench/main_test.go
+
+
 echo "expert"
 echo "color"
 go run ./expert/color.go
