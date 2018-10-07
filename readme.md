@@ -455,7 +455,7 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2017 Simon Waldherr  
+Copyright © 2018 Simon Waldherr  
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.  
 
 
@@ -469,10 +469,5 @@ feel free to support me
 you can do so by:
 
 * [donate via PayPal](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me") or [liberaPay](https://liberapay.com/SimonWaldherr/donate "Donate using Liberapay")
-* buy me a beer at a conference
-* give me a job where i can work on open source projects
-
-
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/bpWGS5JKXiHEB18kfHGr1x3q/SimonWaldherr/golang-examples.svg' />
-</a>
+* buy me a beer or [Club-Mate](https://en.wikipedia.org/wiki/Club-Mate#Hacker_culture) at a conference
+* give me a job where I can work on open source projects (please don't contact me via LinkedIn - please send an eMail or [contact me via twitter](http://twitter.com/SimonWaldherr) instead)
