@@ -43,9 +43,9 @@ func genCert() {
 		NotAfter:              time.Now().AddDate(0, 0, 10),
 		SubjectKeyId:          []byte{1, 2, 3, 4, 5},
 		BasicConstraintsValid: true,
-		IsCA:        true,
-		ExtKeyUsage: []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth, x509.ExtKeyUsageServerAuth},
-		KeyUsage:    x509.KeyUsageDigitalSignature | x509.KeyUsageCertSign,
+		IsCA:                  true,
+		ExtKeyUsage:           []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth, x509.ExtKeyUsageServerAuth},
+		KeyUsage:              x509.KeyUsageDigitalSignature | x509.KeyUsageCertSign,
 	}
 
 	priv, _ := rsa.GenerateKey(rand.Reader, 4096)
