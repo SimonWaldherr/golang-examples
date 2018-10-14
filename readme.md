@@ -211,6 +211,13 @@ Make structs (objects) which have functions
 go run oop.go
 ```
 
+Dependency injection for easier testing
+
+```Shell
+cd beginner/di
+go test
+```
+
 ### Advanced
 
 Benchmarking example (using JSON marshal and unmarshal for the sample)
