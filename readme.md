@@ -439,7 +439,7 @@ go run image.go
 Sql (sqlite) golang example
 
 ```Shell
-go Shellrun sqlite.go insert test
+go run sqlite.go insert test
 go run sqlite.go select
 ```
 
