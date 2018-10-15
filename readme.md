@@ -35,7 +35,8 @@ If you want even more golang examples, you can take a look at my other go reposi
 * [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) currently only contains a snake clone
 * [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a mandelbrot fractal and saves it as png
 * [golibs](https://github.com/SimonWaldherr/golibs) contains various Go packages (e.g. math, converter, stack, cli, ...)
-* [cgol.go](https://github.com/SimonWaldherr/cgol.go) is conways game of life in Golang
+* [fsagent](https://github.com/SimonWaldherr/fsagent) watch a folder for new or modified files and do something
+* [cgol.go](https://github.com/SimonWaldherr/cgol.go) is [Conway's](https://en.wikipedia.org/wiki/John_Horton_Conway) [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in [Golang](https://en.wikipedia.org/wiki/Go_(programming_language))
 * [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
 * [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
 * [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
@@ -234,7 +235,7 @@ Make pipeable unix applications with os.Stdin ([Golang Playground](https://play.
 go run pipe.go
 ```
 
-AES-GCM encryption example
+AES-GCM encryption example ([Golang Playground](https://play.golang.org/p/ujfs6s5JZ-P))
 
 ```Shell
 go run aesgcm.go
@@ -248,7 +249,7 @@ Please install package golang.org/x/crypto/bcrypt before run this file by runnin
 go run bcrypt.go
 ```
 
-Search element is exist in arrays or not
+Search element is exist in arrays or not ([Golang Playground](https://play.golang.org/p/1gVa9Jgk6vg))
 
 ```Shell
 go run in_array.go
@@ -266,25 +267,25 @@ Read from stdin (but don't wait for the enter key)
 go run getchar.go
 ```
 
-Wait and sleep
+Wait and sleep ([Golang Playground](https://play.golang.org/p/qGec1g7rTHC))
 
 ```Shell
 go run wait.go
 ```
 
-Last in - first out - example
+Last in - first out - example ([Golang Playground](https://play.golang.org/p/TekltztwUfE))
 
 ```Shell
 go run lifo.go
 ```
 
-Split a string via regular expression and make an array from the result
+Split a string via regular expression and make an array from the result ([Golang Playground](https://play.golang.org/p/sWFDPMyF-wD))
 
 ```Shell
 go run regex.go
 ```
 
-More advanced regex (with time and dates)
+More advanced regex (with time and dates) ([Golang Playground](https://play.golang.org/p/u1SdhFEwRch))
 
 ```Shell
 go run regex2.go
