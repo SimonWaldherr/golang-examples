@@ -12,13 +12,13 @@ if you like, feel free to add more golang examples. Many thanks to all [contribu
 
 with [homebrew](http://mxcl.github.io/homebrew/):
 
-```go
+```Shell
 sudo brew install go
 ```
 
 with [apt](http://packages.qa.debian.org/a/apt.html)-get:
 
-```go
+```Shell
 sudo apt-get install golang
 ```
 
@@ -57,157 +57,157 @@ If you know ```#!```, also known as [Shebang](https://en.wikipedia.org/wiki/Sheb
 
 Print Hello World with comments
 
-```go
+```Shell
 go run HelloWorld.go
 ```
 
 Print Hello World with comments (shebang version)
 
-```go
+```Shell
 ./HelloWorldShebang.go
 ```
 
 Declare variables and print them
 
-```go
+```Shell
 go run var.go
 ```
 
 Various ways (and styles) to print variables
 
-```go
+```Shell
 go run printf.go
 ```
 
 If statement in golang
 
-```go
+```Shell
 go run if.go Hello
 ```
 
 Declare array and print it's items
 
-```go
+```Shell
 go run array.go
 ```
 
 Declare your own functions
 
-```go
+```Shell
 go run function.go
 ```
 
 Do something multiple times
 
-```go
+```Shell
 go run for.go
 ```
 
 Read via cli provided input data
 
-```go
+```Shell
 go run args.go string string2
 ```
 
 Read via cli provided input data
 
-```go
+```Shell
 go run input.go
 ```
 
 Or scan for it
 
-```go
+```Shell
 go run scan.go
 ```
 
 Read named argument input data
 
-```go
+```Shell
 go run flag.go
 ```
 
 Return the *working directory*
 
-```go
+```Shell
 go run dir.go
 ```
 
 Return the current time/date in various formats
 
-```go
+```Shell
 go run time.go
 ```
 
 Return pseudo random integer values
 
-```go
+```Shell
 go run random.go
 ```
 
 Concat strings in two different ways
 
-```go
+```Shell
 go run cat.go
 ```
 
 Modulo operation finds the remainder of division
 
-```go
+```Shell
 go run modulo.go
 ```
 
 Split a string by another string and make an array from the result
 
-```go
+```Shell
 go run split.go
 ```
 
 An example implementation of the Ackermann function
 
-```go
+```Shell
 go run ackermann.go
 ```
 
 An example implementation of the Euclidean algorithm
 
-```go
+```Shell
 go run euklid.go
 ```
 
 Make pipeable unix applications with os.Stdin
 
-```go
+```Shell
 go run pipe.go
 ```
 
 Submit a function as argument
 
-```go
+```Shell
 go run functioncallback.go
 ```
 
 A function returned by a function
 
-```go
+```Shell
 go run functionclosure.go
 ```
 
 A function with an unknown amount of inputs (variadic function)
 
-```go
+```Shell
 go run functionvariadic.go
 ```
 
 Empty interface as argument (You Don't Know Type)
 
-```go
+```Shell
 go run interfaces.go
 ```
 
 Make structs (objects) which have functions
 
-```go
+```Shell
 go run oop.go
 ```
 
@@ -224,13 +224,13 @@ Benchmarking example (using JSON marshal and unmarshal for the sample)
 
 From the root directory (`$GOPATH/github.com/SimonWaldherr/golang-examples`), run this command:
 
-```go
+```Shell
 go test -bench=. -benchmem advanced/json_bench/main_test.go
 ```
 
 AES-GCM encryption example
 
-```go
+```Shell
 go run aesgcm.go
 ```
 
@@ -238,127 +238,127 @@ Bcrypt hashing example
 
 Please install package golang.org/x/crypto/bcrypt before run this file by running `go get golang.org/x/crypto/bcrypt`
 
-```go
+```Shell
 go run bcrypt.go
 ```
 
 Search element is exist in arrays or not
 
-```go
+```Shell
 go run in_array.go
 ```
 
 Calculate triangles
 
-```go
+```Shell
 go run pythagoras.go (float|?) (float|?) (float|?)
 ```
 
 Read from stdin (but don't wait for the enter key)
 
-```go
+```Shell
 go run getchar.go
 ```
 
 Wait and sleep
 
-```go
+```Shell
 go run wait.go
 ```
 
 Last in - first out - example
 
-```go
+```Shell
 go run lifo.go
 ```
 
 Split a string via regular expression and make an array from the result
 
-```go
+```Shell
 go run regex.go
 ```
 
 More advanced regex (with time and dates)
 
-```go
+```Shell
 go run regex2.go
 ```
 
 Use my [golibs regex package](https://github.com/SimonWaldherr/golibs#regex-----)
 
-```go
+```Shell
 go run regex3.go
 ```
 
 Calculate and print the fibonacci numbers
 
-```go
+```Shell
 go run fibonacci.go
 ```
 
 Calculate and print the requested (32th) prime number
 
-```go
+```Shell
 go run prime.go 32
 ```
 
 Do things with numbers, strings and switch-cases
 
-```go
+```Shell
 go run numbers.go
 ```
 
 Pop and push in golang
 
-```go
+```Shell
 go run lifo.go
 ```
 
 List files in working directory
 
-```go
+```Shell
 go run explorer.go
 ```
 
 Start a ticker (do things periodically)
 
-```go
+```Shell
 go run ticker.go
 ```
 
 Do something in case of a timeout
 
-```go
+```Shell
 go run timeout.go
 ```
 
 Convert go object to json string
 
-```go
+```Shell
 go run json.go
 ```
 
 Run unix/shell commands in go apps
 
-```go
+```Shell
 go run exec.go
 ```
 
 Compress by pipe
 
-```go
+```Shell
 go run compress.go
 ```
 
 Compress by file
 
-```go
+```Shell
 go run compress2.go
 ```
 
 Run a self killing app
 
-```go
+```Shell
 go run suicide.go
 ```
 
@@ -366,45 +366,45 @@ go run suicide.go
 
 Calculate π with go (leibniz, euler and prime are running until you stop it via CTRL+C)
 
-```go
-go Shellrun pi2go.go leibniz
-go Shellrun pi2go.go euler
+```Shell
+go run pi2go.go leibniz
+go run pi2go.go euler
 go run pi2go.go prime
 ```
 
 Convert from rgb to hsl
 
-```go
+```Shell
 go run color.go
 ```
 
 Telnet with golang
 
-```go
+```Shell
 go run telnet.go
 ```
 
 The smallest golang http server
 
-```go
+```Shell
 go run httpd.go
 ```
 
 Secure golang http server
 
-```go
+```Shell
 go run httpsd.go
 ```
 
 The smallest golang http proxy
 
-```go
+```Shell
 go run proxy.go
 ```
 
 Read and write cookies
 
-```go
+```Shell
 go run cookies.go
 ```
 
@@ -425,33 +425,33 @@ time go run dynparallel.go 8
 
 Run the compiler and comment each line which contains an error
 
-```go
+```Shell
 go build gocomment.go
 ./gocomment go-app.go
 ```
 
 Convert a image to a grayscale and to a color inverted image
 
-```go
+```Shell
 go run image.go
 ```
 
 Sql (sqlite) golang example
 
-```go
+```Shell
 go Shellrun sqlite.go insert test
 go run sqlite.go select
 ```
 
 Public-key/asymmetric cryptography signing and validating
 
-```go
+```Shell
 go run ppk-crypto.go
 ```
 
 Hashing (md5, sha) in go
 
-```go
+```Shell
 go run hashing.go
 ```
 
