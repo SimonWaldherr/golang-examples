@@ -51,11 +51,11 @@ If all of this is even not enough for you, you can take a look at the following 
 
 ### Beginner
 
-To execute a **golang** program, write ```go run``` at the cli followed by the name of the file.
-You also can convert the file to a binary executable program by the command ```go build```.
-If you know ```#!```, also known as [Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)), there is an equivalent for go: ```//usr/bin/env go run $0 $@ ; exit```
+To execute a **Golang** program, write ```go run``` at the cli followed by the name of the file.  
+You also can convert the file to a binary executable program by the command ```go build```.  
+If you know ```#!```, also known as [Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)), there is an equivalent for go: ```//usr/bin/env go run $0 $@ ; exit```  
 
-Print Hello World with comments
+Print Hello World with comments ([Golang Playground](https://play.golang.org/p/PiUVBrRB9AR))
 
 ```Shell
 go run HelloWorld.go
@@ -67,145 +67,145 @@ Print Hello World with comments (shebang version)
 ./HelloWorldShebang.go
 ```
 
-Declare variables and print them
+Declare variables and print them ([Golang Playground](https://play.golang.org/p/O3_FWH2IQ75))
 
 ```Shell
 go run var.go
 ```
 
-Various ways (and styles) to print variables
+Various ways (and styles) to print variables ([Golang Playground](https://play.golang.org/p/QH05DN_CeJU))
 
 ```Shell
 go run printf.go
 ```
 
-If statement in golang
+If statement in Golang ([Golang Playground](https://play.golang.org/p/rIpps0zUl1N))
 
 ```Shell
 go run if.go Hello
 ```
 
-Declare array and print it's items
+Declare array and print its items ([Golang Playground](https://play.golang.org/p/jqseOd76Dqk))
 
 ```Shell
 go run array.go
 ```
 
-Declare your own functions
+Declare your own functions ([Golang Playground](https://play.golang.org/p/9L0-F76gK0D))
 
 ```Shell
 go run function.go
 ```
 
-Do something multiple times
+Do something multiple times ([Golang Playground](https://play.golang.org/p/5G3Ek89eKCH))
 
 ```Shell
 go run for.go
 ```
 
-Read via cli provided input data
+Read via cli provided input data ([Golang Playground](https://play.golang.org/p/oUZ97D0Kg-_O))
 
 ```Shell
 go run args.go string string2
 ```
 
-Read via cli provided input data
+Read via cli provided input data ([Golang Playground](https://play.golang.org/p/4IjMGLZBmue))
 
 ```Shell
 go run input.go
 ```
 
-Or scan for it
+Or scan for it ([Golang Playground](https://play.golang.org/p/rZ6clB9Z9Zu))
 
 ```Shell
 go run scan.go
 ```
 
-Read named argument input data
+Read named argument input data ([Golang Playground](https://play.golang.org/p/i7BXecoK_wZ))
 
 ```Shell
 go run flag.go
 ```
 
-Return the *working directory*
+Return the *working directory* ([Golang Playground](https://play.golang.org/p/Ijx04bm8r8s))
 
 ```Shell
 go run dir.go
 ```
 
-Return the current time/date in various formats
+Return the current time/date in various formats ([Golang Playground](https://play.golang.org/p/tPbn_CbHYYw))
 
 ```Shell
 go run time.go
 ```
 
-Return pseudo random integer values
+Return pseudo random integer values ([Golang Playground](https://play.golang.org/p/PapALcxQkpN))
 
 ```Shell
 go run random.go
 ```
 
-Concat strings in two different ways
+Concat strings in two different ways ([Golang Playground](https://play.golang.org/p/sBD_-peBzm5))
 
 ```Shell
 go run cat.go
 ```
 
-Modulo operation finds the remainder of division
+Modulo operation finds the remainder of division ([Golang Playground](https://play.golang.org/p/mYcueUHX1XL))
 
 ```Shell
 go run modulo.go
 ```
 
-Split a string by another string and make an array from the result
+Split a string by another string and make an array from the result ([Golang Playground](https://play.golang.org/p/VYP9tVMcbPW))
 
 ```Shell
 go run split.go
 ```
 
-An example implementation of the Ackermann function
+An example implementation of the Ackermann function ([Golang Playground](https://play.golang.org/p/OjNgscvZhZT))
 
 ```Shell
 go run ackermann.go
 ```
 
-An example implementation of the Euclidean algorithm
+An example implementation of the Euclidean algorithm ([Golang Playground](https://play.golang.org/p/b1HWeUyk4Uf))
 
 ```Shell
 go run euklid.go
 ```
 
-Make pipeable unix applications with os.Stdin
-
-```Shell
-go run pipe.go
-```
-
-Submit a function as argument
+Submit a function as argument ([Golang Playground](https://play.golang.org/p/fy0_S3J29_2))
 
 ```Shell
 go run functioncallback.go
 ```
 
-A function returned by a function
+A function returned by a function ([Golang Playground](https://play.golang.org/p/earjKURMsPp))
 
 ```Shell
 go run functionclosure.go
 ```
 
-A function with an unknown amount of inputs (variadic function)
+A function with an unknown amount of inputs (variadic function) ([Golang Playground](https://play.golang.org/p/s4Fvj8voh3Y))
 
 ```Shell
 go run functionvariadic.go
 ```
 
-Empty interface as argument (You Don't Know Type)
+Empty interface as argument (You Don't Know Type) ([Golang Playground](https://play.golang.org/p/D7OPshRATt_e))
 
 ```Shell
-go run interfaces.go
+go run interface.go
 ```
 
-Make structs (objects) which have functions
+Execute Shell/Bash commands and print its output values ([Golang Playground](https://play.golang.org/p/4Z-wLSkPJll))
+
+```Shell
+go run shell.go
+```
+
+Make structs (objects) which have functions ([Golang Playground](https://play.golang.org/p/t-082xlTu2t))
 
 ```Shell
 go run oop.go
@@ -226,6 +226,12 @@ From the root directory (`$GOPATH/github.com/SimonWaldherr/golang-examples`), ru
 
 ```Shell
 go test -bench=. -benchmem advanced/json_bench/main_test.go
+```
+
+Make pipeable unix applications with os.Stdin ([Golang Playground](https://play.golang.org/p/NqrUOfBmJtt))
+
+```Shell
+go run pipe.go
 ```
 
 AES-GCM encryption example
