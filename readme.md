@@ -372,6 +372,14 @@ go run pi2go.go euler
 go run pi2go.go prime
 ```
 
+Calculate π with go - same as above - but with live output (based on [gcurses](https://godoc.org/github.com/SimonWaldherr/golibs/gcurses))
+
+```Shell
+go run pi2go-live.go leibniz
+go run pi2go-live.go euler
+go run pi2go-live.go prime
+```
+
 Convert from rgb to hsl
 
 ```Shell
