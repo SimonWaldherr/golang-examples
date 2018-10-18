@@ -103,6 +103,6 @@ func main() {
 
 	err = png.Encode(file, img)
 	if err != nil {
-	    log.Fatalf("Error encoding image: %s\n", err)
+		log.Fatalf("Error encoding image: %s\n", err)
 	}
 }

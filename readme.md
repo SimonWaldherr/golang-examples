@@ -451,6 +451,18 @@ Convert a image to a grayscale and to a color inverted image
 go run image.go
 ```
 
+Generate an image with three colored circles (with intersection)
+
+```Shell
+go run image2.go
+```
+
+Generate an image representing the Mandelbrot fractal
+
+```Shell
+go run image3.go
+```
+
 Sql (sqlite) golang example
 
 ```Shell
