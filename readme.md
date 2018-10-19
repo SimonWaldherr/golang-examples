@@ -4,9 +4,9 @@
 
 ## About
 
-These examples explain the basics of golang. There will be more examples from time to time.
+These examples explain the basics of Golang. There will be more examples from time to time.
 
-if you like, feel free to add more golang examples. Many thanks to all [contributors](https://github.com/SimonWaldherr/golang-examples/graphs/contributors).
+if you like, feel free to add more Golang examples. Many thanks to all [contributors](https://github.com/SimonWaldherr/golang-examples/graphs/contributors).
 
 ## Install go(lang)
 
@@ -22,23 +22,24 @@ with [apt](http://packages.qa.debian.org/a/apt.html)-get:
 sudo apt-get install golang
 ```
 
-[install golang manually](https://golang.org/doc/install)
+[install Golang manually](https://golang.org/doc/install)
 or
 [compile it yourself](https://golang.org/doc/install/source)
 
 ## Examples
 
-The examples are divided into three levels of difficulty. The [Beginner](https://github.com/SimonWaldherr/golang-examples#beginner) section contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. The [Advanced](https://github.com/SimonWaldherr/golang-examples#advanced) section uses more complicated features of golang. Finally, the [Expert](https://github.com/SimonWaldherr/golang-examples#expert) section contains applications like telnet-clients or http-server (even with SSL).
-If you want even more golang examples, you can take a look at my other go repositories at github:
+The examples are divided into three levels of difficulty. The [Beginner](https://github.com/SimonWaldherr/golang-examples#beginner) section contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. The [Advanced](https://github.com/SimonWaldherr/golang-examples#advanced) section uses more complicated features of Golang. Finally, the [Expert](https://github.com/SimonWaldherr/golang-examples#expert) section contains applications like telnet-clients or http-server (even with SSL).
+If you want even more Golang examples, you can take a look at my other go repositories at GitHub:
 
 * [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization) visualizes various sorting algorithms on the terminal or as gif
 * [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) currently only contains a snake clone
-* [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a mandelbrot fractal and saves it as png
+* [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a [Mandelbrot Fractal](https://en.wikipedia.org/wiki/Mandelbrot_set) and saves it as PNG
 * [golibs](https://github.com/SimonWaldherr/golibs) contains various Go packages (e.g. math, converter, stack, cli, ...)
 * [fsagent](https://github.com/SimonWaldherr/fsagent) watch a folder for new or modified files and do something
 * [cgol.go](https://github.com/SimonWaldherr/cgol.go) is [Conway's](https://en.wikipedia.org/wiki/John_Horton_Conway) [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in [Golang](https://en.wikipedia.org/wiki/Go_(programming_language))
 * [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
 * [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
+* [zplgfa](https://github.com/SimonWaldherr/zplgfa) is an image converter to print pictures on zpl compatible labels
 * [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
 
 All of them are published as free and open source software.
