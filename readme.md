@@ -274,7 +274,7 @@ Wait and sleep ([Golang Playground](https://play.golang.org/p/qGec1g7rTHC))
 go run wait.go
 ```
 
-Last in - first out - example ([Golang Playground](https://play.golang.org/p/TekltztwUfE))
+Last in - first out - example (Pop and push in Golang) ([Golang Playground](https://play.golang.org/p/TekltztwUfE))
 
 ```Shell
 go run lifo.go
@@ -314,12 +314,6 @@ Do things with numbers, strings and switch-cases
 
 ```Shell
 go run numbers.go
-```
-
-Pop and push in golang
-
-```Shell
-go run lifo.go
 ```
 
 List files in working directory
@@ -364,6 +358,24 @@ Compress by file
 go run compress2.go
 ```
 
+Parse CSV ([Golang Playground](https://play.golang.org/p/plVmXW8TB32))
+
+```Shell
+go run csv.go
+```
+
+Convert CSV to a Markdown table ([Golang Playground](https://play.golang.org/p/HTobb_U9JQt))
+
+```Shell
+go run csv2md.go
+```
+
+Parse a XML string into a Struct with undefined Fields ([Golang Playground](https://play.golang.org/p/6LuNPcaeagS))
+
+```Shell
+go run xml.go
+```
+
 Run a self killing app
 
 ```Shell
@@ -394,25 +406,25 @@ Convert from rgb to hsl
 go run color.go
 ```
 
-Telnet with golang
+Telnet with Golang
 
 ```Shell
 go run telnet.go
 ```
 
-The smallest golang http server
+The smallest Golang http server
 
 ```Shell
 go run httpd.go
 ```
 
-Secure golang http server
+Secure Golang http server
 
 ```Shell
 go run httpsd.go
 ```
 
-The smallest golang http proxy
+The smallest Golang http proxy
 
 ```Shell
 go run proxy.go
@@ -464,7 +476,7 @@ Generate an image representing the Mandelbrot fractal
 go run image3.go
 ```
 
-Sql (sqlite) golang example
+Sql (sqlite) Golang example
 
 ```Shell
 go run sqlite.go insert test
@@ -485,7 +497,7 @@ go run hashing.go
 
 ## Compile
 
-One great aspect of golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
+One great aspect of Golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
 If you start fibonacci.go and the compiled version you will notice, that the last line which contains the execution time doesn't differ much, but if you start it with ```time ./fibonacci 32``` and ```time go run ./fibonacci.go 32``` you will see the difference.
 
 ## License

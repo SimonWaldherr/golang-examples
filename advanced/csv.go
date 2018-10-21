@@ -9,67 +9,55 @@ import (
 	"strings"
 )
 
-func fixedLengthBefore(str string, spacer string, length int) string {
-	spacer = spacer[:1]
-	l := length - len(str)
-	if l > 0 {
-		return strings.Repeat(spacer, l) + str
-	}
-	if l == 0 {
-		return str
-	}
-	return str[:length]
+func LoadCSVfromFile(filename string) (map[int][]string, map[string]int) {
+	fp, _ := os.Open(filename)
+	return loadCSV(bufio.NewReader(fp))
 }
 
-func convertCSVtoMD(filename string) string {
-	fp, _ := os.Open(filename)
+func LoadCSVfromString(csv string) (map[int][]string, map[string]int) {
+	fp := strings.NewReader(csv)
+	return loadCSV(fp)
+}
 
+func loadCSV(reader io.Reader) (map[int][]string, map[string]int) {
 	var row int
-	var columnLength = map[int]int{}
+	var head = map[int][]string{}
 	var data = map[int][]string{}
 
-	csvReader := csv.NewReader(bufio.NewReader(fp))
+	csvReader := csv.NewReader(reader)
 	csvReader.Comma = ';'
 	for {
 		record, err := csvReader.Read()
 		if err == io.EOF {
 			break
 		}
-		for k := range record {
-			clen := len(record[k])
-			if columnLength[k] < clen {
-				columnLength[k] = clen
-			}
+
+		if row == 0 {
+			head[row] = record
+		} else {
+			data[row] = record
 		}
-		data[row] = record
 		row++
 	}
-
-	var md string
-	var mdHeader string
-	header := true
-	for row = 0; row < len(data); row++ {
-		for colKey := range data[row] {
-			if colKey != 0 {
-				md += "|"
-			}
-			md += fixedLengthBefore(data[row][colKey], " ", columnLength[colKey])
-			if header {
-				if colKey != 0 {
-					mdHeader += "|"
-				}
-				mdHeader += strings.Repeat("-", columnLength[colKey])
-			}
-		}
-		md += "\n"
-		if header {
-			md += mdHeader + "\n"
-			header = false
-		}
-	}
-	return md
+	return data, GetHead(head)
 }
 
+func GetHead(data map[int][]string) map[string]int {
+	head := make(map[string]int, len(data[0]))
+	for pos, name := range data[0] {
+		head[name] = pos
+	}
+	return head
+}
+
+var userdata string = `id;name;email
+0;John Doe;jDoe@example.org
+1;Jane Doe;jane.doe@example.com
+2;Max Mustermann;m.mustermann@alpha.tld`
+
 func main() {
-	fmt.Println(convertCSVtoMD("example.csv"))
+	csvmap, k := LoadCSVfromString(userdata)
+	for _, user := range csvmap {
+		fmt.Println(user[k["name"]])
+	}
 }
