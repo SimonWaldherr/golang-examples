@@ -31,6 +31,7 @@ or
 The examples are divided into three levels of difficulty. The [Beginner](https://github.com/SimonWaldherr/golang-examples#beginner) section contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. The [Advanced](https://github.com/SimonWaldherr/golang-examples#advanced) section uses more complicated features of Golang. Finally, the [Expert](https://github.com/SimonWaldherr/golang-examples#expert) section contains applications like telnet-clients or http-server (even with SSL).
 If you want even more Golang examples, you can take a look at my other go repositories at GitHub:
 
+* [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) shows how to benchmark the execution time of Golang functions
 * [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization) visualizes various sorting algorithms on the terminal or as gif
 * [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) currently only contains a snake clone
 * [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a [Mandelbrot Fractal](https://en.wikipedia.org/wiki/Mandelbrot_set) and saves it as PNG
