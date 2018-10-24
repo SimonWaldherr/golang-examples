@@ -1,6 +1,8 @@
 # Go Examples
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSimonWaldherr%2Fgolang-examples.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSimonWaldherr%2Fgolang-examples?ref=badge_shield)
+If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository.  
+[![Gopher Racing](https://raw.githubusercontent.com/SimonWaldherr/golang-benchmarks/master/_gophers_race.jpg "Gopher Racing - by Renee French")](https://github.com/SimonWaldherr/golang-benchmarks)  
+*Gopher drawings by [Renee French](http://reneefrench.blogspot.com)*  
 
 ## About
 
