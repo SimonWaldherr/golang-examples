@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	fmt.Print("Enter digits to sum sperated by a space:")
+	fmt.Print("Enter digits to sum separated by a space:")
 	str, err := getline()
 	if err == nil {
 		fmt.Println("Here is the result:", sumNumbers(str))
