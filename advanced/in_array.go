@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// This function will search element inside array with any type.
+// InArray will search element inside array with any type.
 // Will return boolean and index for matched element.
 // True and index more than 0 if element is exist.
 // needle is element to search, haystack is slice of value to be search.
