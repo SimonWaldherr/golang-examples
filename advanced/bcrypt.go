@@ -8,7 +8,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// Will create hash password
+// CreateHash Will create hash password
 // It should never panic if plainText is given properly
 func CreateHash(plainText string) (hashText string) {
 	preparedPlainText := preparePasswordInput(plainText)
@@ -20,7 +20,7 @@ func CreateHash(plainText string) (hashText string) {
 	return
 }
 
-// Compare hash to plain text, if same it will no return error
+// CompareHash compares hash to plain text, if same it will no return error
 // If not same, it will return error
 func CompareHash(plainText string, hashText string) (err error) {
 	preparedPlainText := preparePasswordInput(plainText)
