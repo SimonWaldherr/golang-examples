@@ -1,0 +1,81 @@
+
+\documentclass[
+    sender,
+    paper=a4,
+    version=last,
+    fontsize=12pt,
+    DIV=13,
+    BCOR=0mm]{scrlttr2}
+\parskip4mm
+\parindent0mm
+\usepackage[english,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{changepage}
+\changepage{+3cm}{}{}{}{}{}{}{}{-5cm}
+\LoadLetterOption{sender}
+
+\begin{document}
+
+\newpage
+\setkomavar*{enclseparator}{Appendix}
+\setkomavar{subject}{Subject: This is an Example}
+\setkomavar{date}{2019-03-11}
+\setkomavar{place}{Munich}
+
+\begin{letter}{
+    Dr. John F. Doe \\
+    Musterweg 2\\
+    12345 Bielefeld
+}
+\opening{Dear Recipient}
+
+\selectlanguage{english}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+
+\closing{kind regards}
+
+\newpage
+\setkomavar*{enclseparator}{Appendix}
+\setkomavar{subject}{Subject: This is an Example}
+\setkomavar{date}{2019-03-11}
+\setkomavar{place}{Munich}
+
+\begin{letter}{
+    Prof. Dr. Jane A. Doe \\
+    Musterweg 3\\
+    12345 Bielefeld
+}
+\opening{Dear Recipient}
+
+\selectlanguage{english}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+
+\closing{kind regards}
+
+\newpage
+\setkomavar*{enclseparator}{Appendix}
+\setkomavar{subject}{Subject: This is an Example}
+\setkomavar{date}{2019-03-11}
+\setkomavar{place}{Munich}
+
+\begin{letter}{
+    Dr. Sascha  Doe \\
+    Musterweg 4\\
+    12345 Bielefeld
+}
+\opening{Dear Recipient}
+
+\selectlanguage{english}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+
+\closing{kind regards}
+
+\end{letter}
+
+\end{document}

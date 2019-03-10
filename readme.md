@@ -307,13 +307,13 @@ Calculate and print the fibonacci numbers
 go run fibonacci.go
 ```
 
-Calculate and print the requested (32th) prime number
+Calculate and print the requested (32th) prime number ([Golang Playground](https://play.golang.org/p/fB25PQlVWu4))
 
 ```Shell
 go run prime.go 32
 ```
 
-Do things with numbers, strings and switch-cases
+Do things with numbers, strings and switch-cases ([Golang Playground](https://play.golang.org/p/MvKDvR_wzlQ))
 
 ```Shell
 go run numbers.go
@@ -323,6 +323,13 @@ List files in working directory
 
 ```Shell
 go run explorer.go
+```
+
+Use a template to create and fill documents (this example uses [LaTeX](https://www.latex-project.org)) ([Golang Playground](https://play.golang.org/p/riy6SU21alH))
+
+```Shell
+go run template.go
+pdflatex -interaction=nonstopmode template_latex.tex
 ```
 
 Start a ticker (do things periodically)
