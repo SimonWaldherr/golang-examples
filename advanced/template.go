@@ -43,10 +43,6 @@ func getDate() string {
 	return time.Now().Format("2006-01-02")
 }
 
-func getPlace() string {
-	return "Munich"
-}
-
 func main() {
 	jsonstr, latexstr := getExampleData()
 
@@ -60,7 +56,9 @@ func main() {
 	fmap := template.FuncMap{
 		"shortMiddleName": shortMiddleName,
 		"getDate":         getDate,
-		"getPlace":        getPlace,
+		"getPlace": func() string {
+			return "Munich"
+		},
 	}
 
 	t := template.New("letter").Delims("<<", ">>").Funcs(fmap)
