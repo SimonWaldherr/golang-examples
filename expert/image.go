@@ -13,7 +13,7 @@ type ImageSet interface {
 }
 
 func main() {
-	file, err := os.Open("./selfcss.png")
+	file, err := os.Open("./images/selfcss.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -21,7 +21,7 @@ func main() {
 
 	img, err := png.Decode(file)
 	if err != nil {
-		log.Fatal(os.Stderr, "%s: %v\n", "./selfcss.png", err)
+		log.Fatal(os.Stderr, "%s: %v\n", "./images/selfcss.png", err)
 	}
 
 	b := img.Bounds()
@@ -37,7 +37,7 @@ func main() {
 		}
 	}
 
-	fd, err := os.Create("./gray.png")
+	fd, err := os.Create("./images/gray.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -52,7 +52,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	file, err = os.Open("./selfcss.png")
+	file, err = os.Open("./images/selfcss.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -60,7 +60,7 @@ func main() {
 
 	img, err = png.Decode(file)
 	if err != nil {
-		log.Fatal(os.Stderr, "%s: %v\n", "./selfcss.png", err)
+		log.Fatal(os.Stderr, "%s: %v\n", "./images/selfcss.png", err)
 	}
 
 	b = img.Bounds()
@@ -79,7 +79,7 @@ func main() {
 		}
 	}
 
-	fd, err = os.Create("./inv.png")
+	fd, err = os.Create("./images/inv.png")
 	if err != nil {
 		log.Fatal(err)
 	}

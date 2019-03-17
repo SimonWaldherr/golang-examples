@@ -94,7 +94,7 @@ func Mandelbrot(width, height, cx1, cx2, cy1, cy2 uint64, csr, csg, csb int) (*i
 func main() {
 	img, _ := Mandelbrot(900, 900, 0, 900, 0, 900, 2, 3, 1)
 
-	file, err := os.OpenFile("mandelbrot.png", os.O_WRONLY|os.O_CREATE, 0600)
+	file, err := os.OpenFile("./images/mandelbrot.png", os.O_WRONLY|os.O_CREATE, 0600)
 	defer file.Close()
 
 	if err != nil {

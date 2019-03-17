@@ -410,6 +410,24 @@ go run pi2go-live.go euler
 go run pi2go-live.go prime
 ```
 
+run assemply code from golang
+
+```Shell
+go run assembly.go
+```
+
+run C code from golang 
+
+```Shell
+go run cgo.go
+```
+
+generate Go code with golang templates
+
+```Shell
+go run codegen.go
+```
+
 Convert from rgb to hsl
 
 ```Shell

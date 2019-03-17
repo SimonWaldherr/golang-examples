@@ -46,7 +46,7 @@ func main() {
 		}
 	}
 
-	f, err := os.OpenFile("rgb.png", os.O_WRONLY|os.O_CREATE, 0600)
+	f, err := os.OpenFile("./images/rgb.png", os.O_WRONLY|os.O_CREATE, 0600)
 	if err != nil {
 		fmt.Println(err)
 		return
