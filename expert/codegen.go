@@ -9,7 +9,7 @@ import (
 )
 
 //go:generate go run codegen.go
-//go:generate go fmt codegenerated.go
+//go:generate go fmt codegenerated/codegenerated.go
 
 type Struct struct {
 	Name   string
@@ -43,7 +43,7 @@ func genStructCode() {
 		"TypeOf": typeOf,
 	}).Parse(templateString)
 
-	out, _ := os.Create("codegenerated.go")
+	out, _ := os.Create("codegenerated/codegenerated.go")
 	defer out.Close()
 
 	tpl.Execute(out, data)
