@@ -1,8 +1,7 @@
 # Go Examples
 
-If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository.  
-[![Gopher Racing](https://raw.githubusercontent.com/SimonWaldherr/golang-benchmarks/master/_gophers_race.jpg "Gopher Racing - by Renee French")](https://github.com/SimonWaldherr/golang-benchmarks)  
-*Gopher drawings by [Renee French](http://reneefrench.blogspot.com)*  
+If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
+[![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)
 
 ## About
 
@@ -223,10 +222,15 @@ cd beginner/di
 go test
 ```
 
+Hashing (md5, sha) in go ([Golang Playground](https://play.golang.org/p/fB2Y2MV7zt3))
+
+```Shell
+go run hashing.go
+```
+
 ### Advanced
 
-Benchmarking example (using JSON marshal and unmarshal for the sample)
-
+Benchmarking example (using JSON marshal and unmarshal for the sample) ([Golang Playground](https://play.golang.org/p/80Tcnkb301J)) 
 From the root directory (`$GOPATH/github.com/SimonWaldherr/golang-examples`), run this command:
 
 ```Shell
@@ -245,8 +249,7 @@ AES-GCM encryption example ([Golang Playground](https://play.golang.org/p/ujfs6s
 go run aesgcm.go
 ```
 
-Bcrypt hashing example
-
+Bcrypt hashing example ([Golang Playground](https://play.golang.org/p/9R7oS56Od6H)) 
 Please install package golang.org/x/crypto/bcrypt before run this file by running `go get golang.org/x/crypto/bcrypt`
 
 ```Shell
@@ -259,7 +262,7 @@ Search element is exist in arrays or not ([Golang Playground](https://play.golan
 go run in_array.go
 ```
 
-Calculate triangles
+Calculate triangles ([Golang Playground](https://play.golang.org/p/l8ehuAWZitv))
 
 ```Shell
 go run pythagoras.go (float|?) (float|?) (float|?)
@@ -295,13 +298,13 @@ More advanced regex (with time and dates) ([Golang Playground](https://play.gola
 go run regex2.go
 ```
 
-Use my [golibs regex package](https://github.com/SimonWaldherr/golibs#regex-----)
+Use my [golibs regex package](https://github.com/SimonWaldherr/golibs#regex-----) and have fun ([Golang Playground](https://play.golang.org/p/1RxtOxL0nQo))
 
 ```Shell
 go run regex3.go
 ```
 
-Calculate and print the fibonacci numbers
+Calculate and print the fibonacci numbers ([Golang Playground](https://play.golang.org/p/BbjQ_ohw0m1))
 
 ```Shell
 go run fibonacci.go
@@ -319,12 +322,6 @@ Do things with numbers, strings and switch-cases ([Golang Playground](https://pl
 go run numbers.go
 ```
 
-List files in working directory
-
-```Shell
-go run explorer.go
-```
-
 Use a template to create and fill documents (this example uses [LaTeX](https://www.latex-project.org)) ([Golang Playground](https://play.golang.org/p/riy6SU21alH))
 
 ```Shell
@@ -332,19 +329,19 @@ go run template.go
 pdflatex -interaction=nonstopmode template_latex.tex
 ```
 
-Start a ticker (do things periodically)
+Start a ticker (do things periodically) 
 
 ```Shell
 go run ticker.go
 ```
 
-Do something in case of a timeout
+Do something in case of a timeout ([Golang Playground](https://play.golang.org/p/Qtu62LaC3-q))
 
 ```Shell
 go run timeout.go
 ```
 
-Convert go object to json string
+Convert go object to json string ([Golang Playground](https://play.golang.org/p/s1onU7jpP91))
 
 ```Shell
 go run json.go
@@ -410,6 +407,13 @@ go run pi2go-live.go euler
 go run pi2go-live.go prime
 ```
 
+
+List files in working directory
+
+```Shell
+go run explorer.go
+```
+
 run assemply code from golang
 
 ```Shell
@@ -428,7 +432,7 @@ generate Go code with golang templates
 go run codegen.go
 ```
 
-Convert from rgb to hsl
+Convert from rgb to hsl ([Golang Playground](https://play.golang.org/p/UuX27PhA0Zx))
 
 ```Shell
 go run color.go
@@ -515,12 +519,6 @@ Public-key/asymmetric cryptography signing and validating
 
 ```Shell
 go run ppk-crypto.go
-```
-
-Hashing (md5, sha) in go
-
-```Shell
-go run hashing.go
 ```
 
 ## Compile
