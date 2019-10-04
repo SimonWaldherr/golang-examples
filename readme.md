@@ -42,6 +42,7 @@ If you want even more Golang examples, you can take a look at my other go reposi
 * [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
 * [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
 * [zplgfa](https://github.com/SimonWaldherr/zplgfa) is an image converter to print pictures on zpl compatible labels
+* [gocv](https://github.com/hybridgroup/gocv)
 * [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
 
 All of them are published as free and open source software.
@@ -388,6 +389,19 @@ Run a self killing app
 ```Shell
 go run suicide.go
 ```
+
+GoCV : hello video
+
+```Shell
+go run hello_video.go
+```
+
+GoCV : face detection
+
+```Shell
+go run face_detect.go 0 model/haarcascade_frontalface_default.xml
+```
+
 
 ### Expert
 
