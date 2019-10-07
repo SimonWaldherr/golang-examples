@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+	"log"
 
 	"github.com/dgrijalva/jwt-go"
 )
@@ -62,4 +63,10 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 
 	// Return the token
 	fmt.Fprintf(w, "%s", tokenString)
+}
+
+func main() {
+	http.HandleFunc("/signin", controllers.Signin)
+	log.Println("Starting server on port :8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))	
 }
