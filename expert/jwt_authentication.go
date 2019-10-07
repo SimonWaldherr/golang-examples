@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -25,7 +24,7 @@ type Claims struct {
 // Signin handler to handle signin request
 func Signin(w http.ResponseWriter, r *http.Request) {
 
-	jwtKey = []byte("this_is_a_secret_token")
+	jwtKey := []byte("this_is_a_secret_token")
 
 	var creds Credentials
 	// Decode body of the request to get username
