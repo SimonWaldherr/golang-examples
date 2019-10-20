@@ -542,6 +542,11 @@ We can get argument values though command line by specifying the operator '-' wi
 go run command_line_arguments.go
 go run command_line_arguments.go -env=qa -consumer=true
 ```
+Cron-example
+
+```Shell
+go run cron.go
+```
 
 ## Compile
 
