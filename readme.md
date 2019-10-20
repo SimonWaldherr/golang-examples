@@ -535,6 +535,14 @@ Public-key/asymmetric cryptography signing and validating
 go run ppk-crypto.go
 ```
 
+Command Line Arguments Golang Example
+We can get argument values though command line by specifying the operator '-' with the name of the argument and the value to be set. E.g. -env=qa
+
+```Shell
+go run command_line_arguments.go
+go run command_line_arguments.go -env=qa -consumer=true
+```
+
 ## Compile
 
 One great aspect of Golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
