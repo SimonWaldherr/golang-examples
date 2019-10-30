@@ -66,7 +66,7 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/signin", controllers.Signin)
+	http.HandleFunc("/signin", Signin)
 	log.Println("Starting server on port :8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))	
 }
