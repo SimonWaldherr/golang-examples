@@ -550,6 +550,13 @@ We can trigger a function at a particular time through cron
 go run cron.go
 ```
 
+Map Golang Example
+Hash Map standard functions in golang 
+
+```Shell
+go run map.go
+```
+
 ## Compile
 
 One great aspect of Golang is, that you can start go applications via ```go run name.go```, but also compile it to an executable with ```go build name.go```. After that you can start the compiled version which starts much faster.
