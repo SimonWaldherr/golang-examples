@@ -27,7 +27,7 @@ func main() {
 		company string  = "Go Experts"
 		salary  float64 = 50000.0
 	)
-	
+
 	fmt.Print(company)
 	fmt.Print(salary)
 }
