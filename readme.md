@@ -1,7 +1,9 @@
 # Go Examples
 
 If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
-[![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)
+[![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
+or my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
+[![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)
 
 ## About
 
@@ -522,7 +524,8 @@ Generate an image representing the Mandelbrot fractal
 go run image3.go
 ```
 
-Sql (sqlite) Golang example
+Sql (sqlite) Golang example  
+maybe you also wanna take a look at my [sql-examples](https://github.com/SimonWaldherr/sql-examples)-project
 
 ```Shell
 go run sqlite.go insert test
