@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you refer to this project, please cite it as below."
+authors:
+- family-names: "Waldherr"
+  given-names: "Simon"
+title: "golang-examples"
+version: 1.14.0
+doi: 10.5281/zenodo.5362197
+date-released: 2021-09-01
+url: "https://github.com/SimonWaldherr/golang-examples"
