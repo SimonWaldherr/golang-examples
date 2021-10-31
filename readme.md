@@ -2,7 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712)  
 [![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)  
-[![codebeat badge](https://codebeat.co/badges/51c49310-3b2e-4e54-a32c-de2e8c981dc2)](https://codebeat.co/projects/github-com-simonwaldherr-golang-examples-master)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 
 If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
