@@ -571,10 +571,8 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2019 Simon Waldherr
+Copyright © 2021 Simon Waldherr
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSimonWaldherr%2Fgolang-examples.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSimonWaldherr%2Fgolang-examples?ref=badge_large)
 
 ## Support me
 
