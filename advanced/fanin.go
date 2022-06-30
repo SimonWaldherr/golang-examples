@@ -12,7 +12,7 @@ func generator(start, end int) <-chan int {
 	// Fire a goroutine to send values on the channel
 	go func() {
 		for i := start; i < end; i++ {
-			c <- i // This blocks untill there is a reader for the chan
+			c <- i // This blocks until there is a reader for the chan
 		}
 		// close the channel when done; otherwise it leaks resources
 		close(c)
@@ -22,7 +22,7 @@ func generator(start, end int) <-chan int {
 }
 
 /* The fan in pattern is an important pattern which combines
-mulitple channels, returns a single channel from those channels
+multiple channels, returns a single channel from those channels
 */
 
 func fanIn(chans ...<-chan int) chan int {
@@ -40,7 +40,7 @@ func fanIn(chans ...<-chan int) chan int {
 
 	wg.Add(len(chans))
 
-	// send values on c via differnt goroutines
+	// send values on c via different goroutines
 	for _, ch := range chans {
 		go output(ch)
 	}

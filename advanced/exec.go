@@ -34,7 +34,7 @@ func main() {
 	var datecmd *exec.Cmd
 	var lscmd *exec.Cmd
 
-	//of course the following lines are realy useless (they are only for example purposes)
+	//of course the following lines are really useless (they are only for example purposes)
 	datecmd = exec.Command("date", "+%d.%m.%Y %H:%M:%S")
 	grep1 := exec.Command("grep", "-o", "\\d\\d.\\d\\d.\\d\\d\\d\\d")
 	date, err1 := pipe_cmd(datecmd, grep1)

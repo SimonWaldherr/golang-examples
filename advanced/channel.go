@@ -17,7 +17,7 @@ func init() {
 func maxprocs1() {
 	/*
 	 * Channels are useful for communications between multiple
-	 * go routines, even when the routines are not runned in parralel.
+	 * go routines, even when the routines are not runned in parallel.
 	 *
 	 */
 
