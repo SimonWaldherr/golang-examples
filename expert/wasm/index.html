@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="./wasm_exec.js"></script>
+		<script>
+			
+			if (!WebAssembly.instantiateStreaming) {
+				WebAssembly.instantiateStreaming = async (resp, importObject) => {
+					const source = await (await resp).arrayBuffer();
+					return await WebAssembly.instantiate(source, importObject);
+				};
+			}
+			
+			const go = new Go();
+			WebAssembly.instantiateStreaming(fetch("cc.wasm"), go.importObject).then((result) => {
+				go.run(result.instance);
+			});
+			
+			function convert() {
+				cmyk = rgb2cmyk(document.getElementById("in").value);
+				document.getElementById("out").value = cmyk;
+				return false;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input name="in" id="in" type="text" onkeyup="convert()"><br/>
+		<input name="out" id="out" type="text" disabled="disabled">
+	</body>
+</html>
+
