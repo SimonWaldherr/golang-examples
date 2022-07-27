@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// Create a temprary file
+	// Create a temporary file
 	f, err := os.CreateTemp("", "sample")
 	if err != nil {
 		fmt.Println(err)
