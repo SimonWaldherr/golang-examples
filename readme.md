@@ -48,7 +48,6 @@ If you want even more Golang examples, you can take a look at my other go reposi
 * [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
 * [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
 * [zplgfa](https://github.com/SimonWaldherr/zplgfa) is an image converter to print pictures on zpl compatible labels
-* [gocv](https://github.com/hybridgroup/gocv)
 * [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
 
 All of them are published as free and open source software.
@@ -571,7 +570,7 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2021 Simon Waldherr
+Copyright © 2022 Simon Waldherr
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.
 
 ## Support me
