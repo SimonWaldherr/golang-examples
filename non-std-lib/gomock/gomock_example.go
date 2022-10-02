@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// The non-mock implementation of the
+// The non-mock implementation of the client
 type MyApiClient struct{}
 
 type Server struct {
