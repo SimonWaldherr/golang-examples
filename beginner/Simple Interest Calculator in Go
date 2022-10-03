@@ -1,0 +1,17 @@
+package main // initialisation
+import ("fmt")
+func main() {
+    var principal, interest, period, total float64; //Declaration of variables
+    //user input
+    fmt.Print("Please enter principal amount: ")
+    fmt.Scanln(&principal)
+    fmt.Print("Please enter Interest Rate: ")
+    fmt.Scanln(&interest)
+    fmt.Print("Please enter period: ")
+    fmt.Scanln(&period)
+    //problem solving statement
+    total= (principal* interest* period) / 100
+    //solution output
+    fmt.Println("\nSimple Interest  Amount: ", total)
+    fmt.Println("\n Total  Amount: ", amount+total)
+}
