@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"github.com/antchfx/xmlquery"
 	"github.com/antchfx/xpath"
+	"strings"
 )
 
 func main() {

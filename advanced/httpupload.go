@@ -83,7 +83,7 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-//this is the HTML template - usually this would be stored in a separate file
+// this is the HTML template - usually this would be stored in a separate file
 var templateString = `
 <!DOCTYPE html>
 <html lang="en">

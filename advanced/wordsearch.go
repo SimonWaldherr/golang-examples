@@ -14,9 +14,11 @@ import (
 // Given board =
 //
 // [
-//   ['A','B','C','E'],
-//   ['S','F','C','S'],
-//   ['A','D','E','E']
+//
+//	['A','B','C','E'],
+//	['S','F','C','S'],
+//	['A','D','E','E']
+//
 // ]
 // word = "ABCCED", -> returns true,
 // word = "SEE", -> returns true,
@@ -75,10 +77,12 @@ func NewWordSearch(board [][]byte) *WordSearch {
 // For example,
 // Given words = ["oath","pea","eat","rain"] and board =
 // [
-//   ['o','a','a','n'],
-//   ['e','t','a','e'],
-//   ['i','h','k','r'],
-//   ['i','f','l','v']
+//
+//	['o','a','a','n'],
+//	['e','t','a','e'],
+//	['i','h','k','r'],
+//	['i','f','l','v']
+//
 // ]
 // Return ["eat","oath"].
 // Note:
