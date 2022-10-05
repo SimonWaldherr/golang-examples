@@ -409,6 +409,11 @@ GoCV : face detection
 go run face_detect.go 0 model/haarcascade_frontalface_default.xml
 ```
 
+Run the example for generic ([Golang Playground](https://go.dev/play/p/586EEI0ZAEe))
+
+```Shell
+go run generic.go
+```
 
 ### Expert
 
