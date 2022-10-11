@@ -1,38 +1,21 @@
-#Go Examples
+# Go Examples
 
-##about
+[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712)  
+[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 
-My first contact with golang was in 2009, but then we went different ways. Now i want work again with golang and help others with their first contact. These examples explain the basics of golang.  
-There will be more examples from time to time.
+If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
+[![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
+my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
+[![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)  
+or my [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) repository:  
+[![SimonWaldherr/rpi-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rpi-examples)
 
-##install go
+## About
 
-with [homebrew](http://mxcl.github.io/homebrew/):
+These examples explain the basics of Golang. There will be more examples from time to time.
 
-```
-sudo brew install go
-```
+Golang-Examples now contains a [live editor](https://simonwaldherr.github.io/golang-examples/) with which the examples can be tried out and modified directly.
 
-with apt-get:
+the live editor is based on the [online editor monaco](https://github.com/microsoft/monaco-editor) in combination with [github.com/live-codes/go2js](https://github.com/live-codes/go2js), which is based on [github.com/gopherjs/gopherjs](https://github.com/gopherjs/gopherjs), which is based on [golang](http://golang.org).
 
-```
-sudo apt-get install golang
-```
-
-##examples
-
-```
-go run for.go
-```
-
-```
-go run args.go
-```
-
-```
-go run if.go
-```
-
-```
-go run modulo.go
-```

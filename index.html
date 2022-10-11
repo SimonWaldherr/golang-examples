@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" data-name="./monaco/editor/editor.main" href="./monaco/editor/editor.main.css" />
+		<style>
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+#container {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+}
+
+.rename-input {
+  display:none;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #006198;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f4f4f4;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+		</style>
+	</head>
+	<body onload="initX();">
+    	<style>#forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:400px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/SimonWaldherr/golang-examples">Fork me on GitHub</a></span>
+		<div class="">
+			<div id="container" class="split left"></div>
+			<div class="split right">
+				<h1>Golang-Examples</h1>
+				<label for="courses">Choose a Course:</label>
+				<select name="courses" id="courses" onchange="selectCourse();">
+				    <option> </option>
+				</select><br/>
+				<label for="queries">Choose a Example:</label>
+				<select name="examples" id="queries" onchange="selectQuery();">
+					<option> </option>
+				</select><br/>
+				<input type="button" name="execute Code (F5)" value="execute Code (F5)" onclick="execQuery();"><br/>
+				<input type="button" name="copy Code to clipboard" value="copy Code to clipboard" onclick="shareQuery();">
+				<div id="error" class="error"></div>
+				<pre id="output">Results will be displayed here</pre>
+			</div>
+		</div>
+		<script>
+			var require = { paths: { vs: './monaco' } };
+		</script>
+		<script src="./monaco/loader.js"></script>
+		<script src="./monaco/editor/editor.main.nls.js"></script>
+		<script src="./monaco/editor/editor.main.js"></script>
+		<!--<script src='./sqljs/sql-wasm.js'></script>
+		<script src='./northwinddb.js'></script>-->
+		<script src='./queries.js'></script>
+		<script src='./loadGopher.js'></script>
+		<script src='./script.js'></script>
+	</body>
+</html>
