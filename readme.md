@@ -4,6 +4,11 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 
+NEW: now with an [online live editor with Golang support](https://simonwaldherr.github.io/golang-examples/). Try out and edit the examples directly in the browser:
+[![SimonWaldherr/golang-benchmarks Online Editor](https://simonwaldherr.github.io/golang-examples/golang-examples.png)](https://simonwaldherr.github.io/golang-examples/)  
+
+
+
 If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
 [![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
 my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
