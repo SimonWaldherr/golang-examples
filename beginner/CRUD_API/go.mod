@@ -1,4 +1,4 @@
-module vallabhiaf/sampleapp
+module golangexample/sampleapp
 
 go 1.19
 
