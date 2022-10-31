@@ -10,9 +10,9 @@ import (
 var clear map[string]func() //create a map for storing clear funcs
 var username [5]string
 var balance [5]float32
-var house [5] int
-var hotels [5] int
-var value [5] float32
+var house [5]int
+var hotels [5]int
+var value [5]float32
 var choice int
 
 func init() {
@@ -76,7 +76,7 @@ func PrintBalance() {
 		fmt.Print(value[count])
 		fmt.Println("              ")
 	}
-		fmt.Println("______________________________________________________________________________________________")
+	fmt.Println("______________________________________________________________________________________________")
 }
 
 func PrintMenu() {
@@ -117,7 +117,7 @@ func PerformAction() {
 		General(1)
 	case 7:
 		General(2)
-        case 8:
+	case 8:
 		Repairs()
 	default:
 		fmt.Println("try again")
@@ -127,7 +127,7 @@ func PerformAction() {
 
 func BankTrans() {
 	var amount float32
-        var act int
+	var act int
 	fmt.Println("                         Increase or decrease")
 	fmt.Println("                         _________________________________")
 	fmt.Println("                           ")
@@ -138,12 +138,11 @@ func BankTrans() {
 	fmt.Scanln(&amount)
 	Modify(act, amount)
 }
-  
 
-func Houses(){
-        var action int
+func Houses() {
+	var action int
 	var amount float32
-        var act int
+	var act int
 	fmt.Println("                         What do you wanna do?")
 	fmt.Println("                         _________________________________")
 	fmt.Println("     ")
@@ -152,77 +151,76 @@ func Houses(){
 	fmt.Println("                         3. Buy a Hotel         4.Sell a Hotel         ")
 	fmt.Println("     ")
 	fmt.Println("                         5. Transfer a House      ")
-        fmt.Scanln(&act)
-        switch act{
+	fmt.Scanln(&act)
+	switch act {
 	case 1:
-	fmt.Println("                         What is the price?")
-        fmt.Scanln(&amount)
-        fmt.Println("                         On which person")
-	fmt.Println("                         _________________________________")
-	fmt.Println("                           ")
-	for {
-		fmt.Scanln(&action)
-		if action > 0 && action < 5 {
-			break
+		fmt.Println("                         What is the price?")
+		fmt.Scanln(&amount)
+		fmt.Println("                         On which person")
+		fmt.Println("                         _________________________________")
+		fmt.Println("                           ")
+		for {
+			fmt.Scanln(&action)
+			if action > 0 && action < 5 {
+				break
+			}
 		}
-	}
 		balance[action] = balance[action] - amount
 		value[action] = value[action] + amount
-                house[action]++                  
+		house[action]++
 	case 2:
 		fmt.Println("                         What is the price?")
-        fmt.Scanln(&amount)
-        fmt.Println("                                   On which person")
-	fmt.Println("                         _________________________________")
-	fmt.Println("                           ")
-	for {
-		fmt.Scanln(&action)
-		if action > 0 && action < 5 {
-			break
+		fmt.Scanln(&amount)
+		fmt.Println("                                   On which person")
+		fmt.Println("                         _________________________________")
+		fmt.Println("                           ")
+		for {
+			fmt.Scanln(&action)
+			if action > 0 && action < 5 {
+				break
+			}
 		}
-	}
 		balance[action] = balance[action] + amount
- 		value[action] = value[action] - amount
+		value[action] = value[action] - amount
 		house[action]--
-        case 3:
+	case 3:
 		fmt.Println("                         What is the price?")
-        fmt.Scanln(&amount)
-        fmt.Println("                                   On which person")
-	fmt.Println("                         _________________________________")
-	fmt.Println("                           ")
-	for {
-		fmt.Scanln(&action)
-		if action > 0 && action < 5 {
-			break
+		fmt.Scanln(&amount)
+		fmt.Println("                                   On which person")
+		fmt.Println("                         _________________________________")
+		fmt.Println("                           ")
+		for {
+			fmt.Scanln(&action)
+			if action > 0 && action < 5 {
+				break
+			}
 		}
-	}
 		balance[action] = balance[action] - amount
 		value[action] = value[action] + amount
-                hotels[action]++                  
+		hotels[action]++
 	case 4:
 		fmt.Println("                         What is the price?")
-        fmt.Scanln(&amount)
-        fmt.Println("                                   On which person")
-	fmt.Println("                         _________________________________")
-	fmt.Println("                           ")
-	for {
-		fmt.Scanln(&action)
-		if action > 0 && action < 5 {
-			break
+		fmt.Scanln(&amount)
+		fmt.Println("                                   On which person")
+		fmt.Println("                         _________________________________")
+		fmt.Println("                           ")
+		for {
+			fmt.Scanln(&action)
+			if action > 0 && action < 5 {
+				break
+			}
 		}
-	}
 		balance[action] = balance[action] + amount
-		value[action] = value[action] - amount	
-	hotels[action]--
+		value[action] = value[action] - amount
+		hotels[action]--
 	case 5:
 		HouseTrans()
 	default:
 		fmt.Println("                         try again")
 		fmt.Scanln()
 	}
-        
+
 }
-   
 
 func HouseTrans() {
 	var action [2]int
@@ -253,13 +251,11 @@ func HouseTrans() {
 	fmt.Scanln(&amount)
 	balance[action[0]] = balance[action[0]] + amount
 	balance[action[1]] = balance[action[1]] - amount
-		value[action[0]] = value[action[0]] - amount
-		value[action[1]] = value[action[1]] + amount
-        house[action[1]]++
-        house[action[0]]--
+	value[action[0]] = value[action[0]] - amount
+	value[action[1]] = value[action[1]] + amount
+	house[action[1]]++
+	house[action[0]]--
 }
-
-
 
 func NormTrans() {
 	var action [2]int
@@ -291,9 +287,6 @@ func NormTrans() {
 	balance[action[0]] = balance[action[0]] - amount
 	balance[action[1]] = balance[action[1]] + amount
 }
-
-
-
 
 func Inc10() {
 	var action int
@@ -383,37 +376,35 @@ func Modify(act int, amount float32) {
 	}
 }
 
-
-func Repairs(){
-        var action int
-        var amount int
-	var houses[5] int
-        var hotels[5] int
+func Repairs() {
+	var action int
+	var amount int
+	var houses [5]int
+	var hotels [5]int
 	fmt.Println("                         Which type of repairs ?")
-	fmt.Println("                         ________________________________")   
- 	fmt.Println("                           ")
+	fmt.Println("                         ________________________________")
+	fmt.Println("                           ")
 	fmt.Println("                         1. major           2.minor")
-        fmt.Println("                           ")
+	fmt.Println("                           ")
 	fmt.Scanln(&action)
-        fmt.Println("                         Houses ?")
-	fmt.Println("                         ________________________________")   
- 	fmt.Println("                           ")
+	fmt.Println("                         Houses ?")
+	fmt.Println("                         ________________________________")
+	fmt.Println("                           ")
 	fmt.Scanln(&houses[0])
-        fmt.Println("                         Hotels ?")
-	fmt.Println("                         ________________________________")   
- 	fmt.Println("                           ")
+	fmt.Println("                         Hotels ?")
+	fmt.Println("                         ________________________________")
+	fmt.Println("                           ")
 	fmt.Scanln(&hotels[0])
-        switch action {
+	switch action {
 	case 1:
-	amount = (houses[0]*40) + (hotels[0]*115)
+		amount = (houses[0] * 40) + (hotels[0] * 115)
 	case 2:
-	amount = (houses[0]*25) + (hotels[0]*100)
+		amount = (houses[0] * 25) + (hotels[0] * 100)
 	default:
 		fmt.Println("                         try again")
 		fmt.Scanln()
 	}
-        Modify(2,float32(amount))
-
+	Modify(2, float32(amount))
 
 }
 
@@ -428,4 +419,3 @@ func main() {
 	}
 
 }
-
