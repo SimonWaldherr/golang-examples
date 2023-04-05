@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+	start := time.Now()
+	fmt.Println("Current time:", start)
+	//Current time: 2023-04-05 19:43:23.329968 +0200 CEST m=+0.000140960
+
 	fmt.Println(strconv.FormatInt(time.Now().Unix(), 10))
 	//1401403874
 	fmt.Println(time.Now().Format(time.RFC850))
@@ -21,4 +25,8 @@ func main() {
 	//1973-11-29T22:33:09+01:00
 	fmt.Println(time.Unix(1234567890, 0).Format(time.RFC822))
 	//14 Feb 09 00:31 CET
+
+	elapsed := time.Since(start)
+	fmt.Println("Time elapsed:", elapsed)
+	//Time elapsed: 428.458µs
 }

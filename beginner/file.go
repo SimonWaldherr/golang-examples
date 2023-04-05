@@ -2,7 +2,7 @@ package main
 
 import "os"
 
-// OpenCreateFile open an existed file or create a file if not exists
+// OpenCreateFile opens an existing file or creates a new file if it does not exist
 func OpenCreateFile(path string) *os.File {
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		f, err := os.Create(path)
