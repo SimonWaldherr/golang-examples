@@ -1,3 +1,5 @@
+// Description: interface example
+// Tags: interface
 package main
 
 import (

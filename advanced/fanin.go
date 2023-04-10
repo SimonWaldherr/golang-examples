@@ -1,3 +1,5 @@
+// Description: Fan in pattern in Go using channels (multiple channels to a single channel)
+// Tags: fan, in, pattern, fan in, fan in patter
 package main
 
 import (

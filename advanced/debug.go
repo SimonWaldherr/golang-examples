@@ -1,3 +1,5 @@
+// Description: debug example
+// Tags: debug, debug example, debug stack, debug stack trace, debug stack trace example, debug stack trace example in golang
 package main
 
 import (

@@ -1,3 +1,5 @@
+// Description: This example shows how to use the exec package to execute external commands and how to pipe them together.
+// Tags: exec, exec.Command, exec.Command.Output, exec.Command.StdoutPipe, exec.Command.Start, exec.Command.Stdin, exec.Command.Output, pipe, pipe command, pipe commands, pipe commands together, pipe commands together, pi
 package main
 
 import (

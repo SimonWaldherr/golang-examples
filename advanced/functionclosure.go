@@ -1,3 +1,5 @@
+// Description: Function closure example
+// Tags: function, closure, function closure, function closure, closure, closure function, closure function, function, function closure, function closure, closure, closure function, closure function
 package main
 
 import (

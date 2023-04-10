@@ -1,3 +1,5 @@
+// Description: Search element inside array with any type.
+// Tags: array, search, array search, array search, search, search array, search array, array, search, array search, array search, search, search array, search array
 package main
 
 import (

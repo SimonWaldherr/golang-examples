@@ -11,6 +11,8 @@ NEW: now with an [online live editor with Golang support](https://simonwaldherr.
 
 If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
 [![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
+my [gotools](https://github.com/SimonWaldherr/gotools) repository:  
+[![SimonWaldherr/gotools - GitHub](https://gh-card.dev/repos/SimonWaldherr/gotools.svg?fullname)](https://github.com/SimonWaldherr/gotools)  
 my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
 [![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)  
 or my [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) repository:  

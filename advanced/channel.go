@@ -1,3 +1,5 @@
+// Description: Channels are useful for communications between multiple go routines, even when the routines are not runned in parallel.
+// Tags: channel, range, for, loop, close, close channel, close ch
 package main
 
 import (

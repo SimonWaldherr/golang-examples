@@ -1,3 +1,5 @@
+// Description: defer panic 2
+// Tags: defer, panic, defer panic, defer panic recover, defer panic recover, recover, recover pani
 package main
 
 import (

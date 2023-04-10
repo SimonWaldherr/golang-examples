@@ -1,3 +1,5 @@
+// Description: Advanced import examples
+// Tags: import, package, namespace, alias, dot, underscore
 package main
 
 import (

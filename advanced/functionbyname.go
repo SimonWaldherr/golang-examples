@@ -1,3 +1,5 @@
+// Description: Call a function by name
+// Tags: function, by name
 package main
 
 import (

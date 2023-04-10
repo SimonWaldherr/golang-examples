@@ -1,3 +1,5 @@
+// Description: Convert CSV to Markdown table
+// Tags: csv, markdown, table, convert, convert csv to markdown, convert csv to markdown table, convert csv to markdown table using golang
 package main
 
 import (

@@ -1,3 +1,5 @@
+// Description: This example shows how to upload files via HTTP using the Go programming language.
+// Tags: http, upload, file, http upload, http file, http upload file, http file upload, http, upload, file, http upload, http file, http upload file, http file upload
 package main
 
 import (

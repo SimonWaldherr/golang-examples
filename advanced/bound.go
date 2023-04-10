@@ -1,3 +1,5 @@
+// Description: Find lower and upper bound of a target in a sorted array
+// Tags: binary, search, algorithm, slice, array, sort, sorted, sorted array, sorted slice, sorted
 package main
 
 import "fmt"

@@ -1,3 +1,5 @@
+// Description: Bubble sort algorithm in Go
+// Tags: bubble, sort, algorithm, slice, array, sort, sorted, sorted array, sorted slice, sorted
 package main
 
 import "fmt"

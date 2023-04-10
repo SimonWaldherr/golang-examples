@@ -1,3 +1,5 @@
+// Description: Command line arguments in Go
+// Tags: command, line, arguments, flag, flag, flag p
 package main
 
 import (

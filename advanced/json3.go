@@ -1,3 +1,5 @@
+// Description: JSON parsing with depth
+// Tags: json, json parse, json parse, parse, parse json, parse json, json, json parse, json parse, parse, parse json, parse json
 package main
 
 import (

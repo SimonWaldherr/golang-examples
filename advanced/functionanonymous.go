@@ -1,3 +1,5 @@
+// Description: Anonymous functions and goroutines
+// Tags: anonymous, function, anonymous function, anonymous function goroutine, anonymous function goroutine, goroutine, goroutine anonymous function, goroutine anonymous function, anonymous function, anonymous function goroutine, anonymous function goroutine, goroutine, goroutine anonymous function, goroutine anonymous function
 package main
 
 import (

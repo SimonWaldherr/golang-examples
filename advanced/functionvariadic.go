@@ -1,3 +1,5 @@
+// Description: Function variadic
+// Tags: function, variadic, function variadic, function variadic, variadic, variadic function, variadic function, function, function variadic, function variadic, variadic, variadic function, variadic function
 package main
 
 import "fmt"

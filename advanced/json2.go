@@ -1,3 +1,5 @@
+// Description: JSON encode/decode with interface{} and Codec interface
+// Tags: json, json marshal, json marshal, marshal, marshal json, marshal json, json, json marshal, json marshal, marshal, marshal json, marshal json
 package main
 
 import (

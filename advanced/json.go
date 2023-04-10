@@ -1,3 +1,5 @@
+// Description: JSON marshalling and unmarshalling
+// Tags: json, json marshal, json marshal, marshal, marshal json, marshal json, json, json marshal, json marshal, marshal, marshal json, marshal json
 package main
 
 import (

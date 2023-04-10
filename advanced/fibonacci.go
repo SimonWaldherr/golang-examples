@@ -1,3 +1,5 @@
+// Description: Fibonacci sequence in Go
+// Tags: fibonacci, sequence, algorithm, slice, array, sort, sorted, sorted array, sorted slice, sorted
 package main
 
 // import required modules

@@ -1,3 +1,5 @@
+// Description: Binary search algorithm implementation in Go
+// Tags: binary, search, algorithm, slice, array, sort, sorted, sorted array, sorted slice, sorted
 package main
 
 import "fmt"

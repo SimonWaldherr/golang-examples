@@ -1,3 +1,5 @@
+// Description: main function and init function
+// Tags: main, init, main function, init function, main function, init function, function, function main, function main, main function, main function, function, function init, function init, init function, init function
 package main
 
 import (

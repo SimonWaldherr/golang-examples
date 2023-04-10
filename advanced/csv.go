@@ -1,3 +1,5 @@
+// Description: CSV parser
+// Tags: csv, parser, csv parser, csv parser in go, csv parser in golang, csv parser in go language, csv parser in golang language, csv parser in go lang, csv parser in golang lang, csv parser in go, csv parser in golang, csv parser in go language, csv parser in golang language, csv parser in go lang, csv parser in golang lang
 package main
 
 import (

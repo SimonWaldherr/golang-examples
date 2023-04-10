@@ -1,3 +1,5 @@
+// Description: compress and decompress a file using flate package
+// Tags: compress, decompress, compress, compress file, decompress file, compress file using flate, decompress file using flate, compress file using flate package, decompress file using flate package
 package main
 
 import (

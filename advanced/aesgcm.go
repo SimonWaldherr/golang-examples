@@ -1,3 +1,5 @@
+// Description: Encrypt and decrypt a string with AES256 in GCM mode
+// Tags: aes, gcm, encryption, decryption, authenticated encryption, nonce
 package main
 
 import (

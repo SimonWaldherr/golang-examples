@@ -1,3 +1,5 @@
+// Description: Function callback example
+// Tags: function, callback, function callback, function callback, callback, callback function, callback function, function, function callback, function callback, callback, callback function, callback function
 package main
 
 import "fmt"

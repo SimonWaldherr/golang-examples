@@ -1,3 +1,5 @@
+// Description: Channel range
+// Tags: channel, range, for, loop, close, close channel, close ch
 package main
 
 import "fmt"

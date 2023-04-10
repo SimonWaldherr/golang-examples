@@ -1,3 +1,5 @@
+// Description: This program shows how to read and write files in Go
+// Tags: file, read, write, file read, file write, file read wr
 package main
 
 import (

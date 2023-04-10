@@ -1,3 +1,5 @@
+// Description: Embedding files into the binary
+// Tags: embed, embed file, embed folder, embed files, embed folder, embed files, embed folder, embed
 package main
 
 import (

@@ -1,3 +1,5 @@
+// Description: get a single character from stdin without pressing enter
+// Tags: getchar, get char, getchar, getchar stdin, getchar without enter, getchar without enter, getchar stdin, getchar stdin, getchar without enter, getchar without enter
 package main
 
 import (

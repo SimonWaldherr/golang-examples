@@ -1,3 +1,5 @@
+// Description: Generic function in Go
+// Tags: generic, function, generic function, generic function, function, function generic, function generic
 package main
 
 import "fmt"

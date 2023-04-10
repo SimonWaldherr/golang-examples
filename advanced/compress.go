@@ -1,3 +1,5 @@
+// Description: Compress stdin to stdout using gzip
+// Tags: compress, gzip, compress, compress stdin, compress stdout, compress stdin to stdout, compress stdin to stdout using gzip
 package main
 
 import (
