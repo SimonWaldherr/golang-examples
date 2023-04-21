@@ -56,6 +56,7 @@ If you want even more Golang examples, you can take a look at my other go reposi
 * [cgol.go](https://github.com/SimonWaldherr/cgol.go) is [Conway's](https://en.wikipedia.org/wiki/John_Horton_Conway) [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in [Golang](https://en.wikipedia.org/wiki/Go_(programming_language))
 * [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
 * [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
+* [WorkingTimeMeasurementSystem](https://github.com/SimonWaldherr/WorkingTimeMeasurementSystem) demonstrates how to create a simple time tracking system using Golang and SQLite
 * [zplgfa](https://github.com/SimonWaldherr/zplgfa) is an image converter to print pictures on zpl compatible labels
 * [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
 
