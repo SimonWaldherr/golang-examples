@@ -1,79 +1,67 @@
 package main
 
 import (
+	"context"
+	"errors"
 	"fmt"
 	"log"
-	"net"
 	"net/http"
-	"strconv"
-	"strings"
-	"sync"
+	"os"
+	"os/signal"
+	"sync/atomic"
 	"time"
 )
 
-var listener net.Listener
-var requestcounter int
-var stopvar bool
-
 type handler struct {
-	wg sync.WaitGroup
-	*http.ServeMux
+	quitChan chan os.Signal
+	counter  *atomic.Int32
 }
 
-func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	h.wg.Add(1)
-	defer h.wg.Done()
-	h.ServeMux.ServeHTTP(w, r)
-
-	w.(http.Flusher).Flush()
+func (h *handler) stop(w http.ResponseWriter, r *http.Request) {
+	h.quitChan <- os.Interrupt
+	w.Write([]byte("listener stopped"))
 }
 
-func restart(w http.ResponseWriter, r *http.Request) {
-	listener.Close()
-	w.Write([]byte("listener restarted"))
-}
-
-func stop(w http.ResponseWriter, r *http.Request) {
-	stopvar = true
-	listener.Close()
-	w.Write([]byte("listener stoped"))
-}
-
-func normal(w http.ResponseWriter, r *http.Request) {
-	url := r.URL.Path
-	if r.URL.RawQuery != "" {
-		url = strings.Join([]string{url, "?", r.URL.RawQuery}, "")
-	}
-	fmt.Fprintf(w, "Hello World\nYou requested: %s\n", url)
+func (h *handler) normal(w http.ResponseWriter, r *http.Request) {
+	number := h.counter.Add(1)
+	fmt.Fprintf(w, "Hello World\nYou requested: %s\n", r.URL)
 	time.Sleep(4 * time.Second)
-	fmt.Fprintf(w, "this is request number %s\n", strconv.Itoa(requestcounter))
-	log.Println(url)
-	requestcounter++
+	fmt.Fprintf(w, "this is request number %d\n", number)
+	log.Println(r.URL)
+}
+
+func handleQuit(quitChan chan os.Signal, srv *http.Server) {
+	<-quitChan
+
+	exitCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	srv.Shutdown(exitCtx)
 }
 
 func main() {
 	log.Printf("started program")
-	var err error
-	var ler string
-	for !stopvar {
-		listener, err = net.Listen("tcp", ":8080")
 
-		if err == nil {
-			log.Printf("started listener on port 8080 with counter: %v\n", requestcounter)
-			h := &handler{ServeMux: http.NewServeMux()}
+	srv := &http.Server{
+		Addr: ":8080",
+	}
 
-			h.ServeMux.HandleFunc("/", normal)
-			h.ServeMux.HandleFunc("/stop", stop)
-			h.ServeMux.HandleFunc("/restart", restart)
+	h := &handler{
+		quitChan: make(chan os.Signal, 1),
+		counter:  new(atomic.Int32),
+	}
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", h.normal)
+	mux.HandleFunc("/stop", h.stop)
+	srv.Handler = mux
 
-			http.Serve(listener, h)
+	signal.Notify(h.quitChan, os.Interrupt)
+	go handleQuit(h.quitChan, srv)
 
-			h.wg.Wait()
-		} else {
-			if fmt.Sprintf("%v", err) != ler {
-				ler = fmt.Sprintf("%v", err)
-				fmt.Println(ler)
-			}
-		}
+	err := srv.ListenAndServe()
+	switch {
+	case errors.Is(err, http.ErrServerClosed):
+		log.Println("server closed. bye o/")
+	case err != nil:
+		log.Fatalf("ListenAndServe: %s", err)
 	}
 }
