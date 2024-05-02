@@ -9,12 +9,15 @@ NEW: now with an [online live editor with Golang support](https://simonwaldherr.
 
 
 
-If you liked this project, you may also like my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
+If you liked this project, you may also like  
+my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
 [![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
 my [gotools](https://github.com/SimonWaldherr/gotools) repository:  
 [![SimonWaldherr/gotools - GitHub](https://gh-card.dev/repos/SimonWaldherr/gotools.svg?fullname)](https://github.com/SimonWaldherr/gotools)  
 my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
 [![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)  
+my [rp2040-examples](https://github.com/SimonWaldherr/rp2040-examples) repository:  
+[![SimonWaldherr/rp2040-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rp2040-examples)  
 or my [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) repository:  
 [![SimonWaldherr/rpi-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rpi-examples)
 
@@ -585,16 +588,5 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2022 Simon Waldherr
+Copyright © 2024 Simon Waldherr
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.
-
-## Support me
-
-if you like what i do
-feel free to support me
-
-you can do so by:
-
-* [donate via PayPal](https://www.paypal.me/SimonWaldherr "Donate to this project via PayPal.me") or [liberaPay](https://liberapay.com/SimonWaldherr/donate "Donate using Liberapay")
-* buy me a beer or [Club-Mate](https://en.wikipedia.org/wiki/Club-Mate#Hacker_culture) at a conference
-* give me a job where I can work on open source projects (please don't contact me via LinkedIn - please send an eMail or [contact me via twitter](http://twitter.com/SimonWaldherr) instead)
