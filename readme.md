@@ -17,7 +17,7 @@ my [gotools](https://github.com/SimonWaldherr/gotools) repository:
 my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
 [![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)  
 my [rp2040-examples](https://github.com/SimonWaldherr/rp2040-examples) repository:  
-[![SimonWaldherr/rp2040-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rp2040-examples)  
+[![SimonWaldherr/rp2040-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rp2040-examples.svg?fullname)](https://github.com/SimonWaldherr/rp2040-examples)  
 or my [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) repository:  
 [![SimonWaldherr/rpi-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rpi-examples)
 
