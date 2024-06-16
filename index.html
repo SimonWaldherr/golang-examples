@@ -39,7 +39,7 @@
         }
     </style>
 </head>
-<body onload="initX();">
+<body onload="initOnLoad();">
     <div class="container-fluid" style="padding-left: 0;">
         <div class="row">
             <div class="col-md-6 left" id="container">
@@ -67,6 +67,11 @@
     </div>
     <script>
         var require = { paths: { vs: './monaco' } };
+        function initOnLoad() {
+            setTimeout(() => {
+                initX();
+            }, "250");
+        }
     </script>
     <script src="./monaco/loader.js"></script>
     <script src="./monaco/editor/editor.main.nls.js"></script>

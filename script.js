@@ -6,7 +6,12 @@ func main() {fmt.Println("Hello, from Go")
 //println("Hello, JS console")
 }`;
 
-var editor = monaco.editor.create(document.getElementById('container'), {
+
+var editor = function () {};
+var myBinding = function () {};
+
+window.addEventListener ('load', function () {
+  editor = monaco.editor.create(document.getElementById('container'), {
     value: initValue,
     language: 'go',
     lineNumbers: "on",
@@ -14,7 +19,24 @@ var editor = monaco.editor.create(document.getElementById('container'), {
     automatiLayout: true,
     roundedSelection: true,
     scrollBeyondLastLine: false
+  });
+  
+  myBinding = editor.addCommand(monaco.KeyCode.F5, function() {
+    var fullcontent = editor.getValue();
+    outputElm.innerHTML = '';
+    
+    var ret = window.go2js
+    .format(fullcontent)
+    .then((formatted) => {
+      editor.setValue(formatted);
+      return window.go2js.compile(formatted, GolangSrc);
+    })
+    .then(eval)
+    .catch(console);
+  });
 });
+
+
 
 var GolangSrc = 'https://simonwaldherr.github.io/go2js/build/';
 var outputElm = document.getElementById('output');
@@ -69,20 +91,6 @@ var execQuery = function() {
       .then(eval)
       .catch(console);
 };
-
-var myBinding = editor.addCommand(monaco.KeyCode.F5, function() {
-    var fullcontent = editor.getValue();
-    outputElm.innerHTML = '';
-    
-    var ret = window.go2js
-      .format(fullcontent)
-      .then((formatted) => {
-        editor.setValue(formatted);
-        return window.go2js.compile(formatted, GolangSrc);
-      })
-      .then(eval)
-      .catch(console);
-});
 
 function execute(commands) {
     tic();
@@ -216,3 +224,5 @@ function selectQuery() {
     
     window.location.hash = '';
 }
+
+
