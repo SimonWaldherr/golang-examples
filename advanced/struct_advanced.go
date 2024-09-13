@@ -31,7 +31,7 @@ func main() {
 		LastName:  "Doe",
 		Birthday:  time.Date(1980, 1, 1, 0, 0, 0, 0, time.UTC),
 		Address: map[string]Address{
-			"home": Address{
+			"home": {
 				Street:     "Mainstreet",
 				Number:     1,
 				Addition:   "A",
