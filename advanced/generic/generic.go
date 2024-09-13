@@ -39,7 +39,7 @@ func main() {
 		SumIntsOrFloats[int64](ints),
 		SumIntsOrFloats[float64](floats))
 
-	fmt.Printf("(type infered) SumIntsOrFloats: %v, SumIntsOrFloats: %v\n",
+	fmt.Printf("(type inferred) SumIntsOrFloats: %v, SumIntsOrFloats: %v\n",
 		SumIntsOrFloats(ints),
 		SumIntsOrFloats(floats))
 

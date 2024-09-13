@@ -44,7 +44,7 @@ func main() {
 
 	// Print the person
 	fmt.Printf("%v, %T, %#v\n", p, p, p)
-	// Output: {John Doe 1980-01-01 00:00:00 +0000 UTC map[home:{Mainstreet 1 A 1234 Amsterdam Netherlands}]}, main.Person, main.Person{FirstName:"John", LastName:"Doe", Birthday:time.Time{wall:0x0, ext:63704560000, loc:(*time.Location)(nil)}, Adress:map[string]main.Adress{"home":main.Adress{Street:"Mainstreet", Number:1, Addition:"A", PostalCode:1234, City:"Amsterdam", Country:"Netherlands"}}}
+	// Output: {John Doe 1980-01-01 00:00:00 +0000 UTC map[home:{Mainstreet 1 A 1234 Amsterdam Netherlands}]}, main.Person, main.Person{FirstName:"John", LastName:"Doe", Birthday:time.Time{wall:0x0, ext:63704560000, loc:(*time.Location)(nil)}, Address:map[string]main.Address{"home":main.Adress{Street:"Mainstreet", Number:1, Addition:"A", PostalCode:1234, City:"Amsterdam", Country:"Netherlands"}}}
 
 	jsonPerson, _ := json.MarshalIndent(p, "", "\t")
 	fmt.Println(string(jsonPerson))
