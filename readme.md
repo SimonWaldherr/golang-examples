@@ -1,10 +1,10 @@
 # Go Examples
 
-[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712)  
-[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)  
+[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 
-NEW: now with an [online live editor with Golang support](https://simonwaldherr.github.io/golang-examples/). Try out and edit the examples directly in the browser:
+Use the [online live editor with Golang support](https://simonwaldherr.github.io/golang-examples/). Edit and run the examples directly in your browser:
 [![SimonWaldherr/golang-benchmarks Online Editor](https://simonwaldherr.github.io/golang-examples/golang-examples.png)](https://simonwaldherr.github.io/golang-examples/)  
 
 
