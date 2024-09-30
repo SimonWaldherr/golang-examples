@@ -4,8 +4,8 @@ This document provides an overview of how to integrate MongoDB with a Go applica
 
 ## Prerequisites
 
-- Go installed on your machine
-- MongoDB instance running
+- [Go installed on your machine for mac](https://formulae.brew.sh/formula/go)
+- [MongoDB instance running](https://github.com/mongodb/mongo-go-driver)
 - [Gin web framework](https://github.com/gin-gonic/gin)
 
 ## Setup
