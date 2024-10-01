@@ -83,7 +83,7 @@ func fetchMoviesFromDB() ([]Movies, error) {
 func main() {
 	router := gin.Default()
 
-	client, err := createMongoClient("your_connection_string_here")
+	client, err := createMongoClient("mongodb://localhost:27017")
 	if err != nil {
 		panic(err)
 	}
@@ -103,5 +103,5 @@ func main() {
 	initializeMongoCollection(client, "name_of_the_database", "name_of_the_collection")
 
 	router.GET("/movies", GetMovies)
-	router.Run("use_your_local_host")
+	router.Run("localhost:8080")
 }
