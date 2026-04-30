@@ -247,6 +247,24 @@ Hashing (md5, sha) in go ([Golang Playground](https://play.golang.org/p/fB2Y2MV7
 go run hashing.go
 ```
 
+Error handling – creating, returning, wrapping and inspecting errors
+
+```Shell
+go run error.go
+```
+
+Switch statement – expression switch, condition switch, type switch and fallthrough
+
+```Shell
+go run switch.go
+```
+
+Type conversions – numeric casts, string/[]byte/[]rune and strconv helpers
+
+```Shell
+go run typeconv.go
+```
+
 ### Advanced
 
 Benchmarking example (using JSON marshal and unmarshal for the sample) ([Golang Playground](https://play.golang.org/p/80Tcnkb301J)) 
@@ -426,6 +444,24 @@ Run the example for generic ([Golang Playground](https://go.dev/play/p/586EEI0ZA
 go run generic.go
 ```
 
+Protect shared state with sync.Mutex and sync.RWMutex
+
+```Shell
+go run mutex.go
+```
+
+Context cancellation, timeouts, deadlines, and value propagation
+
+```Shell
+go run context.go
+```
+
+Worker pool – distribute jobs across a fixed number of goroutines
+
+```Shell
+go run workerpool.go
+```
+
 ### Expert
 
 Calculate π with go (leibniz, euler and prime are running until you stop it via CTRL+C)
@@ -579,6 +615,12 @@ Hash Map standard functions in golang
 
 ```Shell
 go run map.go
+```
+
+Token-bucket rate limiter – throttle request throughput with burst support
+
+```Shell
+go run ratelimiter.go
 ```
 
 ### TinyGo
