@@ -7,6 +7,8 @@
 Use the [online live editor with Golang support](https://simonwaldherr.github.io/golang-examples/). Edit and run the examples directly in your browser:
 [![SimonWaldherr/golang-benchmarks Online Editor](https://simonwaldherr.github.io/golang-examples/golang-examples.png)](https://simonwaldherr.github.io/golang-examples/)  
 
+Play an online game based on Qix implemented in Golang, compiled to WebAssembly and running in the browser: 
+[Qix Game](https://simonwaldherr.github.io/golang-examples/non-std-lib/ebiten.html)  
 
 
 If you liked this project, you may also like  
