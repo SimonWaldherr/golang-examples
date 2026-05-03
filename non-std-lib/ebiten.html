@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebiten WASM Game</title>
+</head>
+<body>
+    <h1>Ebiten Game in WebAssembly</h1>
+    <canvas id="gameCanvas"></canvas>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("ebiten-qix.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+    
+</body>
+</html>
