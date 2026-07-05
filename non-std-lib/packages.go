@@ -1,10 +1,11 @@
 package main
 
 import (
-	"./packages"                                    //import a "local" package folder (package name: foobar)
-	"fmt"                                           //import a standard package
-	"github.com/simonwaldherr/golibs/as"            //the path to the package
-	convert_to "github.com/simonwaldherr/golibs/as" //with a different name
+	"fmt" //import a standard package
+
+	foobar "github.com/SimonWaldherr/golang-examples/non-std-lib/packages" //import a "local" package folder (package name: foobar)
+	"simonwaldherr.de/go/golibs/as"                                        //the path to the package
+	convert_to "simonwaldherr.de/go/golibs/as"                             //with a different name
 )
 
 func main() {

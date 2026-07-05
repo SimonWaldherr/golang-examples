@@ -1,9 +1,10 @@
 package main
 
 import (
-	"./packages/"
 	"bufio"
 	"log"
+
+	foobar "github.com/SimonWaldherr/golang-examples/non-std-lib/packages"
 )
 
 func main() {

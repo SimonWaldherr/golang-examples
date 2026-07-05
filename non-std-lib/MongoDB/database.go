@@ -3,14 +3,15 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
+	"go.mongodb.org/mongo-driver/v2/bson"
+	"go.mongodb.org/mongo-driver/v2/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
 )
 
 type Movies struct {
@@ -25,18 +26,7 @@ var moviesCollection *mongo.Collection
 // Separate function for creating MongoDB client
 func createMongoClient(uri string) (*mongo.Client, error) {
 	clientOptions := options.Client().ApplyURI(uri)
-	client, err := mongo.NewClient(clientOptions)
-	if err != nil {
-		return nil, err
-	}
-	return client, nil
-}
-
-// Separate function for connecting to MongoDB
-func connectToMongo(client *mongo.Client) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-	return client.Connect(ctx)
+	return mongo.Connect(clientOptions)
 }
 
 // Function to test connection with MongoDB
@@ -87,11 +77,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	err = connectToMongo(client)
-	if err != nil {
-		panic(err)
-	}
 	defer client.Disconnect(context.TODO())
 
 	err = pingMongo(client)
@@ -103,5 +88,7 @@ func main() {
 	initializeMongoCollection(client, "name_of_the_database", "name_of_the_collection")
 
 	router.GET("/movies", GetMovies)
-	router.Run("localhost:8080")
+	if err := router.Run("localhost:8080"); err != nil {
+		log.Fatal(err)
+	}
 }

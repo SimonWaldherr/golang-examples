@@ -1,11 +1,14 @@
+//go:build js && wasm
+
 package main
 
 import (
 	"fmt"
-	"github.com/SimonWaldherr/ColorConverterGo"
-	"github.com/SimonWaldherr/golibs/as"
 	"strings"
 	"syscall/js"
+
+	"github.com/SimonWaldherr/ColorConverterGo"
+	"simonwaldherr.de/go/golibs/as"
 )
 
 func rgb2cmykWrapper() js.Func {

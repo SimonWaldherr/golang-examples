@@ -1,8 +1,9 @@
 package main
 
 import (
-	assembly "./assembly"
 	"fmt"
+
+	assembly "github.com/SimonWaldherr/golang-examples/expert/assembly"
 )
 
 func main() {
