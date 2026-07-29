@@ -64,19 +64,29 @@ browser-based Go experiments. Try the
 [nanoGo playground](https://simonwaldherr.github.io/nanoGo/) or embed it in a
 web page.
 
-### nanoGo and TinyGo solve different problems
+### nanoGo, TinyGo, and GopherJS solve different problems
 
-| | [nanoGo](https://github.com/SimonWaldherr/nanoGo) | [TinyGo](https://tinygo.org/) |
-| --- | --- | --- |
-| Execution model | Interprets supported Go source at runtime | Compiles Go programs ahead of time |
-| WebAssembly output | The interpreter runs in WASM and evaluates guest source dynamically | The application itself is compiled to WASM |
-| Best suited to | Playgrounds, REPLs, live examples, controlled embedded scripting, and teaching | Microcontrollers, embedded applications, and deployable WASM programs |
-| Go compatibility | Deliberately supported language and library subset | A compiler with its own documented Go compatibility differences |
-| Host control | Optional capabilities and cooperative resource limits can restrict guest source | The compiled program runs for its selected target; TinyGo is not an interpreter sandbox |
+| | [nanoGo](https://github.com/SimonWaldherr/nanoGo) | [TinyGo](https://tinygo.org/) | [GopherJS](https://github.com/gopherjs/gopherjs) |
+| --- | --- | --- | --- |
+| Execution model | Interprets supported Go source at runtime | Compiles Go programs ahead of time | Compiles Go programs ahead of time to JavaScript |
+| Browser artifact | The interpreter runs in WASM and evaluates guest source dynamically | The application itself can be compiled to WASM | Pure JavaScript generated from the application |
+| Best suited to | Playgrounds, REPLs, live examples, controlled embedded scripting, and teaching | Microcontrollers, embedded applications, and deployable WASM programs | Browser front ends and JavaScript-based web integrations |
+| Go compatibility | Deliberately supported language and library subset | A compiler with its own documented Go compatibility differences | Broad Go support with documented browser and JavaScript-runtime constraints |
+| Host control | Optional capabilities and cooperative resource limits can restrict guest source | The compiled program runs for its selected target; TinyGo is not an interpreter sandbox | The generated program executes with normal browser JavaScript capabilities |
 
-nanoGo is therefore not a smaller replacement for TinyGo. Choose **nanoGo**
-when source must be edited or evaluated at runtime; choose **TinyGo** when you
-want to compile and deploy an application, for example to a Raspberry Pi Pico.
+nanoGo is therefore not a smaller replacement for TinyGo or GopherJS. Choose
+**nanoGo** when source must be edited or evaluated at runtime; choose
+**TinyGo** when you want to compile and deploy an application, for example to
+a Raspberry Pi Pico; choose **GopherJS** when compiled JavaScript is the right
+browser target.
+
+### The existing live editor uses GopherJS
+
+The [GitHub Pages editor](https://simonwaldherr.github.io/golang-examples/)
+uses its [`go2js`](https://github.com/live-codes/go2js) integration, which is
+based on GopherJS. Pressing <kbd>F5</kbd> formats the editor contents,
+compiles the Go program to JavaScript, and evaluates that JavaScript in the
+page. It is a compile-and-run workflow, not a nanoGo interpreter session.
 
 ## Related projects
 
