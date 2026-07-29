@@ -1,7 +1,6 @@
-# Go Examples
+# Golang-Examples
 
-[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712)
-[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21677192.svg)](https://doi.org/10.5281/zenodo.21677192)
 [![Modern Go examples](https://github.com/SimonWaldherr/golang-examples/actions/workflows/modern-go.yml/badge.svg)](https://github.com/SimonWaldherr/golang-examples/actions/workflows/modern-go.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
