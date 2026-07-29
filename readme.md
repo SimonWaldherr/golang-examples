@@ -54,6 +54,31 @@ These examples intentionally use recent stable Go features:
 The flight-recorder example writes `flight.trace`; inspect it with
 `go tool trace flight.trace`.
 
+## Featured project: nanoGo
+
+[nanoGo](https://github.com/SimonWaldherr/nanoGo) is a minimalist interpreter
+for a supported subset of Go. It evaluates source code dynamically in a CLI,
+REPL, embedded host, or browser playground; when used in the browser, the
+interpreter itself is compiled to WebAssembly. That makes nanoGo a strong fit
+for interactive tutorials, editable documentation, controlled snippets, and
+browser-based Go experiments. Try the
+[nanoGo playground](https://simonwaldherr.github.io/nanoGo/) or embed it in a
+web page.
+
+### nanoGo and TinyGo solve different problems
+
+| | [nanoGo](https://github.com/SimonWaldherr/nanoGo) | [TinyGo](https://tinygo.org/) |
+| --- | --- | --- |
+| Execution model | Interprets supported Go source at runtime | Compiles Go programs ahead of time |
+| WebAssembly output | The interpreter runs in WASM and evaluates guest source dynamically | The application itself is compiled to WASM |
+| Best suited to | Playgrounds, REPLs, live examples, controlled embedded scripting, and teaching | Microcontrollers, embedded applications, and deployable WASM programs |
+| Go compatibility | Deliberately supported language and library subset | A compiler with its own documented Go compatibility differences |
+| Host control | Optional capabilities and cooperative resource limits can restrict guest source | The compiled program runs for its selected target; TinyGo is not an interpreter sandbox |
+
+nanoGo is therefore not a smaller replacement for TinyGo. Choose **nanoGo**
+when source must be edited or evaluated at runtime; choose **TinyGo** when you
+want to compile and deploy an application, for example to a Raspberry Pi Pico.
+
 ## Related projects
 
 The following curated list contains public, non-fork repositories from
@@ -71,7 +96,7 @@ collection.
 
 ### Runtimes, data, and AI
 
-- [nanoGo](https://github.com/SimonWaldherr/nanoGo) — a deliberately tiny Go implementation
+- **[nanoGo](https://github.com/SimonWaldherr/nanoGo)** — a Go-subset interpreter for native hosts and WebAssembly, with a playground, REPL, CLI, and embeddable host API
 - [tinySQL](https://github.com/SimonWaldherr/tinySQL) — an educational SQL engine written in pure Go
 - [tinyRAG](https://github.com/SimonWaldherr/tinyRAG) — a lightweight retrieval-augmented generation system
 - [smallR](https://github.com/SimonWaldherr/smallR) — a small R-like environment written in Go
@@ -663,6 +688,9 @@ go run ratelimiter.go
 ### TinyGo
 
 You can even use Go on microcontrollers, the keyword here is [TinyGo](https://tinygo.org/), a go compiler specially developed for SBCs and MCUs.  
+This is distinct from [nanoGo](https://github.com/SimonWaldherr/nanoGo): TinyGo
+compiles programs for deployment, while nanoGo interprets a supported Go subset
+dynamically for interactive and embedded-host use cases.
 If you want to blink the LED of your Raspberry Pi Pico, try this: 
 
 ```Shell
