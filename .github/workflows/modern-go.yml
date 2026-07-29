@@ -1,0 +1,53 @@
+name: Modern Go examples
+
+on:
+  push:
+    paths:
+      - ".github/workflows/modern-go.yml"
+      - "go.mod"
+      - "go.sum"
+      - "beginner/initialized-pointer/**"
+      - "advanced/benchmark-loop/**"
+      - "advanced/generic-alias/**"
+      - "advanced/iterators/**"
+      - "advanced/structured-logging/**"
+      - "advanced/synctest/**"
+      - "advanced/waitgroup-go/**"
+      - "expert/flight-recorder/**"
+      - "scripts/check-modern.sh"
+  pull_request:
+    paths:
+      - ".github/workflows/modern-go.yml"
+      - "go.mod"
+      - "go.sum"
+      - "beginner/initialized-pointer/**"
+      - "advanced/benchmark-loop/**"
+      - "advanced/generic-alias/**"
+      - "advanced/iterators/**"
+      - "advanced/structured-logging/**"
+      - "advanced/synctest/**"
+      - "advanced/waitgroup-go/**"
+      - "expert/flight-recorder/**"
+      - "scripts/check-modern.sh"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Test, vet, and format-check modern examples
+        run: ./scripts/check-modern.sh

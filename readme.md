@@ -1,84 +1,113 @@
 # Go Examples
 
-[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712) 
-[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
+[![DOI](https://zenodo.org/badge/9459712.svg)](https://zenodo.org/badge/latestdoi/9459712)
+[![Go Report Card](https://goreportcard.com/badge/github.com/simonwaldherr/golang-examples)](https://goreportcard.com/report/github.com/simonwaldherr/golang-examples)
+[![Modern Go examples](https://github.com/SimonWaldherr/golang-examples/actions/workflows/modern-go.yml/badge.svg)](https://github.com/SimonWaldherr/golang-examples/actions/workflows/modern-go.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Use the [online live editor with Golang support](https://simonwaldherr.github.io/golang-examples/). Edit and run the examples directly in your browser:
-[![SimonWaldherr/golang-benchmarks Online Editor](https://simonwaldherr.github.io/golang-examples/golang-examples.png)](https://simonwaldherr.github.io/golang-examples/)  
+Small, focused programs for learning Go—from `Hello, World!` to concurrency,
+WebAssembly, runtime tracing, and modern language features. Most examples are
+standalone programs and can be run independently.
 
-Play an online game based on Qix implemented in Golang, compiled to WebAssembly and running in the browser: 
-[Qix Game](https://simonwaldherr.github.io/golang-examples/non-std-lib/ebiten.html)  
+Use the [online editor](https://simonwaldherr.github.io/golang-examples/) to
+edit and run examples in the browser, or play the WebAssembly-based
+[Qix game](https://simonwaldherr.github.io/golang-examples/non-std-lib/ebiten.html).
 
+## Quick start
 
-If you liked this project, you may also like  
-my [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) repository:  
-[![SimonWaldherr/golang-benchmarks - GitHub](https://gh-card.dev/repos/SimonWaldherr/golang-benchmarks.svg?fullname)](https://github.com/SimonWaldherr/golang-benchmarks)  
-my [gotools](https://github.com/SimonWaldherr/gotools) repository:  
-[![SimonWaldherr/gotools - GitHub](https://gh-card.dev/repos/SimonWaldherr/gotools.svg?fullname)](https://github.com/SimonWaldherr/gotools)  
-my [sql-examples](https://github.com/SimonWaldherr/sql-examples) repository:  
-[![SimonWaldherr/sql-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/sql-examples.svg?fullname)](https://github.com/SimonWaldherr/sql-examples)  
-my [rp2040-examples](https://github.com/SimonWaldherr/rp2040-examples) repository:  
-[![SimonWaldherr/rp2040-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rp2040-examples.svg?fullname)](https://github.com/SimonWaldherr/rp2040-examples)  
-my [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) repository:  
-[![SimonWaldherr/rpi-examples - GitHub](https://gh-card.dev/repos/SimonWaldherr/rpi-examples.svg?fullname)](https://github.com/SimonWaldherr/rpi-examples)  
-my [nanoGo](https://github.com/SimonWaldherr/nanoGo) repository:  
-[![SimonWaldherr/nanoGo - GitHub](https://gh-card.dev/repos/SimonWaldherr/nanoGo.svg?fullname)](https://github.com/SimonWaldherr/nanoGo)  
-my [tinySQL](https://github.com/SimonWaldherr/tinySQL) repository:  
-[![SimonWaldherr/tinySQL - GitHub](https://gh-card.dev/repos/SimonWaldherr/tinySQL.svg?fullname)](https://github.com/SimonWaldherr/tinySQL)  
-or my [tinyRAG](https://github.com/SimonWaldherr/tinyRAG) repository:  
-[![SimonWaldherr/tinyRAG - GitHub](https://gh-card.dev/repos/SimonWaldherr/tinyRAG.svg?fullname)](https://github.com/SimonWaldherr/tinyRAG)
+The module version in [`go.mod`](go.mod) is the source of truth for the
+required Go toolchain.
 
-## About
-
-These examples explain the basics of Golang. There will be more examples from time to time.
-
-if you like, feel free to add more Golang examples. Many thanks to all [contributors](https://github.com/SimonWaldherr/golang-examples/graphs/contributors).
-
-## Install go(lang)
-
-with [homebrew](http://mxcl.github.io/homebrew/):
-
-```Shell
-sudo brew install go
+```shell
+git clone https://github.com/SimonWaldherr/golang-examples.git
+cd golang-examples
+go run ./beginner/HelloWorld.go
+go run ./advanced/iterators
+./scripts/check-modern.sh
 ```
 
-with [apt](http://packages.qa.debian.org/a/apt.html)-get:
+## Repository map
 
-```Shell
-sudo apt-get install golang
-```
+| Directory | What you will find |
+| --- | --- |
+| [`beginner/`](beginner/) | Syntax, types, control flow, files, and small algorithms |
+| [`advanced/`](advanced/) | Generics, iterators, concurrency, encoding, tests, and benchmarks |
+| [`expert/`](expert/) | Servers, tracing, assembly, CGO, cryptography, and image generation |
+| [`non-std-lib/`](non-std-lib/) | Examples that depend on third-party packages or external services |
+| [`tinygo/`](tinygo/) | TinyGo and microcontroller examples |
 
-[install Golang manually](https://golang.org/doc/install)
-or
-[compile it yourself](https://golang.org/doc/install/source)
+## Modern Go highlights
 
-## Examples
+These examples intentionally use recent stable Go features:
 
-The examples are divided into three levels of difficulty. The [Beginner](https://github.com/SimonWaldherr/golang-examples#beginner) section contains very easy examples, starting with **Hello World** but also containing a few easy algorithms. The [Advanced](https://github.com/SimonWaldherr/golang-examples#advanced) section uses more complicated features of Golang. Finally, the [Expert](https://github.com/SimonWaldherr/golang-examples#expert) section contains applications like telnet-clients or http-server (even with SSL).
-If you want even more Golang examples, you can take a look at my other go repositories at GitHub:
+| Go version | Feature | Run it |
+| --- | --- | --- |
+| 1.23 | Range-over-function iterators plus `iter`, `maps`, and `slices` | `go run ./advanced/iterators` |
+| 1.24 | Generic type aliases | `go run ./advanced/generic-alias` |
+| 1.24 | Benchmarks with `testing.B.Loop` | `go test ./advanced/benchmark-loop -bench .` |
+| 1.25 | `sync.WaitGroup.Go` | `go run ./advanced/waitgroup-go` |
+| 1.25 | Deterministic concurrent tests with `testing/synctest` | `go test ./advanced/synctest` |
+| 1.25 | Runtime trace flight recorder | `go run ./expert/flight-recorder` |
+| 1.26 | Initialized pointers with `new(expression)` | `go run ./beginner/initialized-pointer` |
+| 1.21 | Structured JSON logging with `log/slog` | `go run ./advanced/structured-logging` |
 
-* [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) shows how to benchmark the execution time of Golang functions
-* [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization) visualizes various sorting algorithms on the terminal or as gif
-* [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) currently only contains a snake clone
-* [bbmandelbrot.go](https://github.com/SimonWaldherr/bbmandelbrot.go) calculates a [Mandelbrot Fractal](https://en.wikipedia.org/wiki/Mandelbrot_set) and saves it as PNG
-* [golibs](https://github.com/SimonWaldherr/golibs) contains various Go packages (e.g. math, converter, stack, cli, ...)
-* [fsagent](https://github.com/SimonWaldherr/fsagent) watch a folder for new or modified files and do something
-* [cgol.go](https://github.com/SimonWaldherr/cgol.go) is [Conway's](https://en.wikipedia.org/wiki/John_Horton_Conway) [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in [Golang](https://en.wikipedia.org/wiki/Go_(programming_language))
-* [micromarkdownGo](https://github.com/SimonWaldherr/micromarkdownGo) converts markdown to html (via regular expression)
-* [wikiGo](https://github.com/SimonWaldherr/wikiGo) is a wiki software in Go
-* [WorkingTimeMeasurementSystem](https://github.com/SimonWaldherr/WorkingTimeMeasurementSystem) demonstrates how to create a simple time tracking system using Golang and SQLite
-* [zplgfa](https://github.com/SimonWaldherr/zplgfa) is an image converter to print pictures on zpl compatible labels
-* [...](https://github.com/search?utf8=✓&q=user%3Asimonwaldherr&type=Repositories&ref=advsearch&l=Go)
+The flight-recorder example writes `flight.trace`; inspect it with
+`go tool trace flight.trace`.
 
-All of them are published as free and open source software.
+## Related projects
 
-If all of this is even not enough for you, you can take a look at the following websites:
+The following curated list contains public, non-fork repositories from
+[SimonWaldherr](https://github.com/SimonWaldherr) that complement this
+collection.
 
-* [tour.golang.org](https://tour.golang.org/)
-* [Go by example](https://gobyexample.com/)
-* [Golang Book](http://www.golang-book.com/)
-* [Go-Learn](https://github.com/skippednote/Go-Learn)
+### Go learning and reusable tools
+
+- [golang-benchmarks](https://github.com/SimonWaldherr/golang-benchmarks) — examples for measuring Go code
+- [GolangSortingVisualization](https://github.com/SimonWaldherr/GolangSortingVisualization) — visualized sorting algorithms
+- [golibs](https://github.com/SimonWaldherr/golibs) — general-purpose Go packages
+- [gotools](https://github.com/SimonWaldherr/gotools) — a collection of small Go tools
+- [GoRealtimeWeb](https://github.com/SimonWaldherr/GoRealtimeWeb) — real-time web application examples
+- [mdExec](https://github.com/SimonWaldherr/mdExec) — executes code blocks in Markdown files
+
+### Runtimes, data, and AI
+
+- [nanoGo](https://github.com/SimonWaldherr/nanoGo) — a deliberately tiny Go implementation
+- [tinySQL](https://github.com/SimonWaldherr/tinySQL) — an educational SQL engine written in pure Go
+- [tinyRAG](https://github.com/SimonWaldherr/tinyRAG) — a lightweight retrieval-augmented generation system
+- [smallR](https://github.com/SimonWaldherr/smallR) — a small R-like environment written in Go
+- [DataDock](https://github.com/SimonWaldherr/DataDock) — a server-side database web interface
+
+### Graphics, games, and hardware
+
+- [golang-minigames](https://github.com/SimonWaldherr/golang-minigames) — small games written in Go
+- [bbmandelbrotGo](https://github.com/SimonWaldherr/bbmandelbrotGo) — Mandelbrot image generation
+- [FluidSimASCII](https://github.com/SimonWaldherr/FluidSimASCII) — an ASCII fluid simulator
+- [vango](https://github.com/SimonWaldherr/vango) — image-manipulation effects
+- [rp2040-examples](https://github.com/SimonWaldherr/rp2040-examples) and [rpi-examples](https://github.com/SimonWaldherr/rpi-examples) — Raspberry Pi and RP2040 examples
+- [RGB-LED-Matrix](https://github.com/SimonWaldherr/RGB-LED-Matrix) and [pico75player](https://github.com/SimonWaldherr/pico75player) — LED-matrix projects
+
+### Other example collections
+
+- [sql-examples](https://github.com/SimonWaldherr/sql-examples)
+- [openscad-examples](https://github.com/SimonWaldherr/openscad-examples)
+- [zig-examples](https://github.com/SimonWaldherr/zig-examples)
+- [cobol-examples](https://github.com/SimonWaldherr/cobol-examples)
+
+All are published as free and open-source software. Browse the complete
+[Go repository search](https://github.com/search?q=user%3ASimonWaldherr+language%3AGo&type=repositories)
+for more.
+
+## Install Go
+
+- macOS with Homebrew: `brew install go`
+- Debian/Ubuntu: `sudo apt install golang-go`
+- Other systems: follow the official [Go installation guide](https://go.dev/doc/install)
+
+## Example catalog
+
+The examples are divided into beginner, advanced, expert, third-party, and
+TinyGo sections. Commands in the catalog below are shown relative to the
+corresponding directory unless they include a directory prefix.
 
 ### Beginner
 
@@ -649,5 +678,5 @@ If you start fibonacci.go and the compiled version you will notice, that the las
 
 ## License
 
-Copyright © 2024 Simon Waldherr
+Copyright © 2026 Simon Waldherr
 Dual-licensed. See the [LICENSE](https://github.com/SimonWaldherr/golang-examples/blob/master/LICENSE) file for details.
