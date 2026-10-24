@@ -2,8 +2,12 @@
 
 many may have used the simple python web server SimpleHTTPServer:
 
-```
+```sh
+# for python 2
 python -m SimpleHTTPServer 8080
+
+# for python 3
+python -m http.server 8080
 ```
 
 the same functionality can be recreated in Go with just a few lines of code:
