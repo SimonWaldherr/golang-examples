@@ -5,8 +5,8 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
 	"log"
+	"os"
 	"path"
 	"runtime"
 	"runtime/debug"
@@ -53,7 +53,7 @@ func debugExample() []byte {
 			break
 		}
 		if file != lastFile {
-			data, err := ioutil.ReadFile(file)
+			data, err := os.ReadFile(file)
 			if err != nil {
 				continue
 			}

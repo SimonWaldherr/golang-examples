@@ -12,7 +12,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -69,7 +68,7 @@ func (e *EncryptedBytes) Scan(value interface{}) error {
 	}
 	defer r.Close()
 
-	ct, err := ioutil.ReadAll(r)
+	ct, err := io.ReadAll(r)
 	if err != nil {
 		return err
 	}

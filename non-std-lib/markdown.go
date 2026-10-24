@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	mmd "simonwaldherr.de/go/micromarkdownGo"
 )
 
 func main() {
-	mdfile, _ := ioutil.ReadFile("./demo.md")
+	mdfile, _ := os.ReadFile("./demo.md")
 
 	md := mmd.Micromarkdown(string(mdfile))
 

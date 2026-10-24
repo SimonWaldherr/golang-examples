@@ -2,20 +2,20 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
+	"os"
 )
 
 func write() {
 	content := []byte("Hello, Golang!")
-	err := ioutil.WriteFile("example.txt", content, 0644)
+	err := os.WriteFile("example.txt", content, 0o644)
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
 func read() {
-	content, err := ioutil.ReadFile("example.txt")
+	content, err := os.ReadFile("example.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
