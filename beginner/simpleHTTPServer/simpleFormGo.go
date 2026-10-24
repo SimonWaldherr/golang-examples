@@ -29,7 +29,6 @@ func handleRequests(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Sorry! Only GET and POST are suppoterd!")
 
 	}
-
 }
 
 func main() {
