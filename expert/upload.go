@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 )
@@ -44,8 +44,8 @@ func upload(w http.ResponseWriter, r *http.Request) {
 		for _, fileHeader := range fileHeaders {
 			file, _ := fileHeader.Open()
 			path = fmt.Sprintf("%s", fileHeader.Filename)
-			buf, _ := ioutil.ReadAll(file)
-			ioutil.WriteFile(path, buf, os.ModePerm)
+			buf, _ := io.ReadAll(file)
+			os.WriteFile(path, buf, os.ModePerm)
 		}
 	}
 	fmt.Printf("File \"%v\" uploaded\n", path)
@@ -54,5 +54,6 @@ func upload(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/upload", upload)
 	http.HandleFunc("/", root)
+	fmt.Println("starting server on :8080")
 	fmt.Print(http.ListenAndServe(":8080", nil))
 }

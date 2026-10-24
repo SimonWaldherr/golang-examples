@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"golang.org/x/crypto/ssh"
@@ -72,7 +71,7 @@ func connectToHost(user, host string) (*ssh.Client, error) {
 }
 
 func connectToHostWithPublicKey(user, host, publicKeyFile string) (*ssh.Client, error) {
-	key, err := ioutil.ReadFile(publicKeyFile)
+	key, err := os.ReadFile(publicKeyFile)
 	if err != nil {
 		return nil, err
 	}

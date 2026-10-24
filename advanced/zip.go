@@ -4,7 +4,6 @@ import (
 	"archive/zip"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
@@ -94,7 +93,7 @@ func ReadZipped(zipFile, file string) string {
 		}
 		defer fileInArchive.Close()
 
-		data, err := ioutil.ReadAll(fileInArchive)
+		data, err := io.ReadAll(fileInArchive)
 		if err != nil {
 			log.Fatal(err)
 		}

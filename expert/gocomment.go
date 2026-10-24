@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"regexp"
@@ -14,7 +13,7 @@ func main() {
 		var output string
 		var i int
 		input := os.Args[1]
-		gosrcs, _ := ioutil.ReadFile(input)
+		gosrcs, _ := os.ReadFile(input)
 		gosrc := string(gosrcs)
 		gorun, _ := exec.Command("go", "build", input).Output()
 		gostr := string(gorun)
@@ -39,6 +38,6 @@ func main() {
 			}
 		}
 		outputb := []byte(output)
-		ioutil.WriteFile(input, outputb, 0755)
+		os.WriteFile(input, outputb, 0o755)
 	}
 }

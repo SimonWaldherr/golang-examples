@@ -7,7 +7,6 @@ import (
 	"crypto/x509"
 	"crypto/x509/pkix"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"math/big"
 	"net"
@@ -15,8 +14,10 @@ import (
 	"time"
 )
 
-var pem string
-var key string
+var (
+	pem string
+	key string
+)
 
 func genCert() {
 	ca := &x509.Certificate{
@@ -56,9 +57,9 @@ func genCert() {
 		return
 	}
 	log.Println("save", pem)
-	ioutil.WriteFile(pem, ca_b, 0644)
+	os.WriteFile(pem, ca_b, 0o644)
 	log.Println("save", key)
-	ioutil.WriteFile(key, x509.MarshalPKCS1PrivateKey(priv), 0644)
+	os.WriteFile(key, x509.MarshalPKCS1PrivateKey(priv), 0o644)
 }
 
 func handleClient(conn net.Conn) {
@@ -94,9 +95,9 @@ func main() {
 		}
 	}
 	if _, err := os.Stat(key); err == nil {
-		ca_b, _ := ioutil.ReadFile(pem)
+		ca_b, _ := os.ReadFile(pem)
 		ca, _ := x509.ParseCertificate(ca_b)
-		priv_b, _ := ioutil.ReadFile(key)
+		priv_b, _ := os.ReadFile(key)
 		priv, _ := x509.ParsePKCS1PrivateKey(priv_b)
 		pool := x509.NewCertPool()
 		pool.AddCert(ca)
@@ -108,10 +109,10 @@ func main() {
 
 		config := tls.Config{
 			Certificates: []tls.Certificate{cert},
-			//MinVersion:   tls.VersionSSL30, //don't use SSLv3, https://www.openssl.org/~bodo/ssl-poodle.pdf
+			// MinVersion:   tls.VersionSSL30, //don't use SSLv3, https://www.openssl.org/~bodo/ssl-poodle.pdf
 			MinVersion: tls.VersionTLS10,
-			//MinVersion:   tls.VersionTLS11,
-			//MinVersion:   tls.VersionTLS12,
+			// MinVersion:   tls.VersionTLS11,
+			// MinVersion:   tls.VersionTLS12,
 		}
 		config.Rand = rand.Reader
 		port := ":4443"
