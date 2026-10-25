@@ -19,13 +19,13 @@ type handler struct {
 
 func (h *handler) stop(w http.ResponseWriter, r *http.Request) {
 	h.quitChan <- os.Interrupt
-	w.Write([]byte("listener stopped"))
+	w.Write([]byte("receive stop server request, shuting down this server"))
 }
 
 func (h *handler) normal(w http.ResponseWriter, r *http.Request) {
 	number := h.counter.Add(1)
 	fmt.Fprintf(w, "Hello World\nYou requested: %s\n", r.URL)
-	time.Sleep(4 * time.Second)
+	time.Sleep(1 * time.Second)
 	fmt.Fprintf(w, "this is request number %d\n", number)
 	log.Println(r.URL)
 }
@@ -39,10 +39,12 @@ func handleQuit(quitChan chan os.Signal, srv *http.Server) {
 }
 
 func main() {
+	addr := ":8080"
 	log.Printf("started program")
+	log.Printf("serve on addr: %s", addr)
 
 	srv := &http.Server{
-		Addr: ":8080",
+		Addr: addr,
 	}
 
 	h := &handler{
@@ -64,4 +66,6 @@ func main() {
 	case err != nil:
 		log.Fatalf("ListenAndServe: %s", err)
 	}
+
+	log.Println("stop server")
 }
